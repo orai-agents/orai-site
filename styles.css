@@ -157,6 +157,17 @@ a:hover {
     color: white;
 }
 
+.section-cta .btn-primary {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    border-color: var(--color-secondary);
+}
+
+.section-cta .btn-primary:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
 .section-cta h2,
 .section-cta p {
     color: white;
@@ -188,7 +199,7 @@ a:hover {
 }
 
 .logo {
-    height: 40px;
+    height: 50px;
     width: auto;
 }
 
@@ -406,6 +417,14 @@ a:hover {
     font-style: italic;
 }
 
+.hide-mobile {
+    display: inline;
+}
+
+.show-mobile-only {
+    display: none;
+}
+
 /* =======================
    Cards Grid
    ======================= */
@@ -561,15 +580,23 @@ a:hover {
     border: 1px solid var(--color-border);
 }
 
-.process-number-img {
-    width: 64px;
-    height: 64px;
+.process-step-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
     margin-bottom: var(--spacing-sm);
 }
 
+.process-number-img {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
 .process-title {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 0;
     font-size: 1.15rem;
+    flex: 1;
 }
 
 .process-list {
@@ -628,17 +655,18 @@ a:hover {
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
 }
 
 .footer-logo {
-    height: 35px;
-    margin-bottom: var(--spacing-sm);
+    height: 45px;
+    margin-bottom: 0.5rem;
 }
 
 .footer-tagline {
     color: var(--color-text-light);
+    margin-bottom: 0;
 }
 
 .footer-title {
@@ -650,6 +678,7 @@ a:hover {
 .footer-contact p,
 .footer-links li {
     margin-bottom: 0.5rem;
+    color: var(--color-text-light);
 }
 
 .footer-contact a,
@@ -713,7 +742,7 @@ a:hover {
     }
     
     .logo {
-        height: 35px;
+        height: 42px;
     }
     
     .hero-cta {
@@ -752,7 +781,8 @@ a:hover {
     }
     
     h1 {
-        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        font-size: clamp(1.6rem, 6vw, 2.5rem);
+        line-height: 1.2;
     }
     
     h2 {
@@ -765,11 +795,19 @@ a:hover {
     
     .hero-subtitle {
         font-size: 1rem;
-        line-height: 1.6;
+        line-height: 1.5;
+    }
+    
+    .hide-mobile {
+        display: none;
+    }
+    
+    .show-mobile-only {
+        display: inline;
     }
     
     .logo {
-        height: 30px;
+        height: 38px;
     }
     
     .nav-cta {
@@ -790,15 +828,21 @@ a:hover {
     
     .footer-content {
         text-align: center;
+        gap: var(--spacing-sm);
     }
     
     .footer-logo {
-        margin: 0 auto var(--spacing-sm);
+        margin: 0 auto var(--spacing-xs);
     }
     
     .footer-links ul {
         display: flex;
-        gap: var(--spacing-md);
+        flex-direction: column;
+        gap: 0.5rem;
         justify-content: center;
+    }
+    
+    .section-title {
+        line-height: 1.3;
     }
 }
