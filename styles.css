@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: clamp(1.75rem, 3.5vw, 3rem);
+    font-size: clamp(1.65rem, 3.2vw, 2.8rem);
     font-weight: 700;
 }
 
@@ -781,8 +781,8 @@ a:hover {
     }
     
     h1 {
-        font-size: clamp(1.6rem, 6vw, 2.5rem);
-        line-height: 1.2;
+        font-size: clamp(1.4rem, 5.5vw, 2.2rem);
+        line-height: 1.25;
     }
     
     h2 {
@@ -832,7 +832,11 @@ a:hover {
     }
     
     .footer-logo {
-        margin: 0 auto var(--spacing-xs);
+        margin: 0 auto 0.25rem;
+    }
+    
+    .footer-tagline {
+        margin-bottom: var(--spacing-sm);
     }
     
     .footer-links ul {
@@ -840,6 +844,18 @@ a:hover {
         flex-direction: column;
         gap: 0.5rem;
         justify-content: center;
+    }
+    
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .text-content p {
+        font-size: 0.9rem;
+    }
+    
+    .section-disclaimer {
+        font-size: 0.85rem;
     }
     
     .section-title {
