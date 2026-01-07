@@ -793,7 +793,7 @@ a:hover {
     }
     
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.95rem;
         line-height: 1.5;
     }
     
@@ -847,6 +847,14 @@ a:hover {
     
     .text-content p {
         font-size: 0.9rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .section-compact .text-content p {
+        font-size: 1rem;
     }
     
     .section-title {
