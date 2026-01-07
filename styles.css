@@ -260,7 +260,6 @@ a:hover {
 
 .hero {
     padding: var(--spacing-lg) 0;
-    background: linear-gradient(135deg, #FAFAFA 0%, #FFFFFF 100%);
     position: relative;
     overflow: hidden;
     z-index: 2;
@@ -844,18 +843,6 @@ a:hover {
         flex-direction: column;
         gap: 0.5rem;
         justify-content: center;
-    }
-    
-    .section-subtitle {
-        font-size: 0.95rem;
-    }
-    
-    .text-content p {
-        font-size: 0.9rem;
-    }
-    
-    .section-disclaimer {
-        font-size: 0.85rem;
     }
     
     .section-title {
