@@ -845,6 +845,10 @@ a:hover {
         justify-content: center;
     }
     
+    .text-content p {
+        font-size: 0.9rem;
+    }
+    
     .section-title {
         line-height: 1.3;
     }
