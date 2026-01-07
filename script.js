@@ -1,4 +1,34 @@
 // =======================
+// Header Smart Hide/Show on Scroll
+// =======================
+
+let lastScrollTop = 0;
+const nav = document.querySelector('.nav');
+const scrollThreshold = 100; // Commence à cacher après 100px de scroll
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Ne pas cacher le header si on est tout en haut
+    if (scrollTop < scrollThreshold) {
+        nav.classList.remove('hidden');
+        lastScrollTop = scrollTop;
+        return;
+    }
+    
+    // Scroll vers le bas - cacher le header
+    if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+        nav.classList.add('hidden');
+    } 
+    // Scroll vers le haut - montrer le header
+    else if (scrollTop < lastScrollTop) {
+        nav.classList.remove('hidden');
+    }
+    
+    lastScrollTop = scrollTop;
+});
+
+// =======================
 // Mobile Navigation Toggle
 // =======================
 
@@ -108,18 +138,6 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-
-// =======================
-// Add subtle parallax effect to hero background
-// =======================
-
-const hero = document.querySelector('.hero');
-if (hero) {
-    window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY;
-        hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-    });
-}
 
 // =======================
 // Form Validation (if needed later)
