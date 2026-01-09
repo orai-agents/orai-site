@@ -873,3 +873,8 @@ a:hover {
     box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
     transform: translateY(-3px);
 }
+
+/* Espace entre intro sur-mesure et exemples */
+.use-cases {
+    margin-top: 60px;
+}
