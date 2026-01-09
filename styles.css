@@ -874,7 +874,3 @@ a:hover {
     transform: translateY(-3px);
 }
 
-/* Espace entre intro sur-mesure et exemples */
-.use-cases {
-    margin-top: 60px;
-}
