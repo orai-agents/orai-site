@@ -861,3 +861,15 @@ a:hover {
         line-height: 1.3;
     }
 }
+
+/* Cadres Comment ça marche - bordure dorée au survol */
+.process-step {
+    transition: all 0.3s ease;
+    border: 2px solid #e5e5e5;
+}
+
+.process-step:hover {
+    border: 2px solid var(--color-secondary);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+    transform: translateY(-3px);
+}
