@@ -7,9 +7,64 @@
     <title>OR AI Agents - Agents IA qui travaillent 24/7 pour votre entreprise</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Ajustements hero */
+        /* Override couleur titres */
+        h1, h2, h3, h4, h5, h6 {
+            color: #2D2D2D;
+        }
+        
+        /* Hero avec fond beige */
+        .hero {
+            background: var(--color-bg-alt);
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(135deg, transparent 48%, rgba(212, 175, 55, 0.02) 49%, rgba(212, 175, 55, 0.02) 51%, transparent 52%);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
         .hero-title {
             font-size: clamp(1.75rem, 3.5vw, 2.8rem);
+        }
+        
+        /* Boutons élégants */
+        .btn-primary {
+            background: var(--color-secondary);
+            color: white;
+            border: 2px solid var(--color-secondary);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: var(--color-accent);
+            border-color: var(--color-accent);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-secondary);
+            border: 2px solid var(--color-secondary);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--color-accent);
+            border-color: var(--color-accent);
         }
         
         .hero-cta .btn {
@@ -21,9 +76,13 @@
             font-size: clamp(1.5rem, 3vw, 2.2rem);
         }
         
-        /* Catégories */
+        /* Catégories encadrées */
         .category-wrapper {
+            border: 2px solid var(--color-border);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
             margin: var(--spacing-lg) 0;
+            background: white;
         }
         
         .category-title {
@@ -108,7 +167,7 @@
             font-size: 1.05rem;
             font-weight: 600;
             margin-bottom: 0.25rem;
-            color: var(--color-text);
+            color: #2D2D2D;
         }
         
         .agent-tagline {
@@ -147,16 +206,16 @@
             font-weight: bold;
         }
         
-        /* Transition CTA - même fond */
+        /* Transition CTA - espace réduit */
         .transition-cta {
-            padding: var(--spacing-lg) 0;
+            padding: var(--spacing-md) 0;
             text-align: center;
         }
         
         .transition-cta p {
             font-size: 1.15rem;
             font-weight: 500;
-            color: var(--color-text);
+            color: #2D2D2D;
             margin-bottom: var(--spacing-md);
             max-width: 800px;
             margin-left: auto;
@@ -240,7 +299,7 @@
         .process-step h4 {
             font-size: 1.1rem;
             margin-bottom: var(--spacing-xs);
-            color: var(--color-text);
+            color: #2D2D2D;
         }
         
         .process-step p {
@@ -262,9 +321,11 @@
                 <span></span>
             </button>
             <ul class="nav-menu">
-                <li><a href="#agents">Agents</a></li>
-                <li><a href="tarifs.html">Tarifs</a></li>
-                <li><a href="#contact" class="nav-cta">Contact</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#agents">Nos Agents</a></li>
+                <li><a href="#sur-mesure">Solutions personnalisées</a></li>
+                <li><a href="tarifs.html">Nos offres</a></li>
+                <li><a href="#contact" class="nav-cta">Planifier un échange</a></li>
             </ul>
         </div>
     </nav>
@@ -273,8 +334,8 @@
     <section class="hero">
         <div class="container hero-content">
             <h1 class="hero-title">Des Agents IA qui travaillent 24/7<br>pour votre entreprise</h1>
-            <p class="hero-subtitle">Automatisez la qualification de leads, le support client et la gestion administrative.<br>
-            Concentrez-vous sur l'essentiel, l'IA gère le reste.</p>
+            <p class="hero-subtitle">Répondre aux appels, qualifier vos prospects, gérer vos demandes clients — et bien plus encore.<br>
+            Votre premier collaborateur IA, adapté à votre métier.</p>
             <div class="hero-cta">
                 <a href="#agents" class="btn btn-primary">Voir le catalogue</a>
                 <a href="#contact" class="btn btn-secondary">Obtenir une solution adaptée</a>
@@ -545,7 +606,7 @@
     </div>
 
     <!-- SECTION SUR-MESURE -->
-    <section class="section section-alt">
+    <section id="sur-mesure" class="section section-alt">
         <div class="container">
             <div class="custom-intro">
                 <h2>Une solution adaptée à chaque entreprise</h2>
@@ -615,7 +676,7 @@
     <!-- SECTION CONTACT -->
     <section id="contact" class="section section-cta">
         <div class="container">
-            <h2 class="section-title-center">Prêt à démarrer ?</h2>
+            <h2 class="section-title-center" style="color: white;">Prêt à démarrer ?</h2>
             <p class="cta-text">Planifions un échange pour discuter de vos besoins.</p>
             <div class="cta-button-wrapper">
                 <a href="mailto:oraiagents@gmail.com" class="btn btn-primary btn-large">oraiagents@gmail.com</a>
@@ -634,7 +695,8 @@
                 <h4 class="footer-title">Navigation</h4>
                 <ul>
                     <li><a href="#agents">Nos agents</a></li>
-                    <li><a href="tarifs.html">Tarifs</a></li>
+                    <li><a href="#sur-mesure">Solutions personnalisées</a></li>
+                    <li><a href="tarifs.html">Nos offres</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>

@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tarifs OR AI Agents - Packs d'agents IA à partir de 490€ + 99€/mois. Solutions adaptées à vos besoins.">
-    <title>Tarifs - OR AI Agents</title>
+    <title>Nos offres - OR AI Agents</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Override couleur titres */
+        h1, h2, h3, h4, h5, h6 {
+            color: #2D2D2D;
+        }
+        
+        /* Boutons élégants */
+        .btn-primary {
+            background: var(--color-secondary);
+            color: white;
+            border: 2px solid var(--color-secondary);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: var(--color-accent);
+            border-color: var(--color-accent);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-secondary);
+            border: 2px solid var(--color-secondary);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--color-accent);
+            border-color: var(--color-accent);
+        }
+        
         /* Hero tarifs */
         .pricing-hero {
             padding: var(--spacing-lg) 0 var(--spacing-md);
@@ -56,7 +87,7 @@
         .pricing-name {
             font-size: 1.3rem;
             font-weight: 600;
-            color: var(--color-text);
+            color: #2D2D2D;
             margin-bottom: var(--spacing-sm);
             text-align: center;
         }
@@ -181,9 +212,11 @@
                 <span></span>
             </button>
             <ul class="nav-menu">
-                <li><a href="index.html#agents">Agents</a></li>
-                <li><a href="tarifs.html">Tarifs</a></li>
-                <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#agents">Nos Agents</a></li>
+                <li><a href="index.html#sur-mesure">Solutions personnalisées</a></li>
+                <li><a href="tarifs.html">Nos offres</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Planifier un échange</a></li>
             </ul>
         </div>
     </nav>
@@ -191,7 +224,7 @@
     <!-- HERO TARIFS -->
     <section class="section pricing-hero">
         <div class="container">
-            <h1>Tarifs</h1>
+            <h1>Nos offres</h1>
             <p>Choisissez le pack adapté à vos besoins.<br>
             Setup unique + abonnement mensuel sans engagement.</p>
         </div>
@@ -289,7 +322,8 @@
                 <h4 class="footer-title">Navigation</h4>
                 <ul>
                     <li><a href="index.html#agents">Nos agents</a></li>
-                    <li><a href="tarifs.html">Tarifs</a></li>
+                    <li><a href="index.html#sur-mesure">Solutions personnalisées</a></li>
+                    <li><a href="tarifs.html">Nos offres</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </div>
