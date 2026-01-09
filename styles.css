@@ -660,7 +660,7 @@ a:hover {
 
 .footer-logo {
     height: 45px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
 }
 
 .footer-tagline {
@@ -916,8 +916,9 @@ a:hover {
     color: #6B7280;
 }
 
-.footer-links-inline {
-    white-space: nowrap;
+.footer-links-inline a {
+    display: block;
+    margin-bottom: 8px;
 }
 
 .footer-bottom {
