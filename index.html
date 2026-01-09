@@ -6,208 +6,418 @@
     <meta name="description" content="Agents IA prêts à l'emploi pour automatiser votre entreprise. Qualification de leads, support client, gestion des emails et plus. À partir de 99€/mois.">
     <title>OR AI Agents - Agents IA qui travaillent 24/7 pour votre entreprise</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ajustements spécifiques pour les catégories et agents */
+        .category-section {
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .category-header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+            color: white;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-bottom: var(--spacing-md);
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .category-header h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: white;
+            margin: 0;
+        }
+        
+        .agent-card {
+            background: white;
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            transition: var(--transition);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .agent-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.20);
+            border-color: var(--color-secondary);
+        }
+        
+        .agent-header {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .agent-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--color-bg-alt);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .agent-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--color-secondary);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        
+        .agent-title-group h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--color-text);
+        }
+        
+        .agent-tagline {
+            font-size: 0.95rem;
+            font-style: italic;
+            color: var(--color-secondary);
+            margin-bottom: 0;
+        }
+        
+        .agent-description {
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.6;
+        }
+        
+        .agent-features {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .agent-features li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+        }
+        
+        .agent-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-secondary);
+            font-weight: bold;
+        }
+        
+        .transition-cta {
+            background: var(--color-bg-alt);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .transition-cta p {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-md);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .transition-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="OR-AI-AGENTS-FINAL-DARK.svg" alt="OR AI Agents">
-                </a>
-            </div>
-            <ul class="nav-links">
+    <!-- NAVIGATION -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <img src="OR-AI-AGENTS-FINAL-DARK.svg" alt="OR AI Agents" class="logo">
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
                 <li><a href="#agents">Agents</a></li>
                 <li><a href="tarifs.html">Tarifs</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- HERO -->
     <section class="hero">
-        <h1>Des agents IA qui travaillent 24/7 pour votre entreprise</h1>
-        <p>Répondez aux appels, qualifiez vos prospects, gérez vos demandes clients — 24/7.<br>
-        Concentrez-vous sur l'essentiel, l'IA gère le reste.</p>
-        <div class="hero-buttons">
-            <a href="#agents" class="btn btn-primary">Voir le catalogue</a>
-            <a href="#contact" class="btn btn-secondary">Obtenir une solution adaptée</a>
+        <div class="container hero-content">
+            <h1 class="hero-title">Des agents IA qui travaillent 24/7 pour votre entreprise</h1>
+            <p class="hero-subtitle">Répondez aux appels, qualifiez vos prospects, gérez vos demandes clients — 24/7.<br>
+            Concentrez-vous sur l'essentiel, l'IA gère le reste.</p>
+            <div class="hero-cta">
+                <a href="#agents" class="btn btn-primary">Voir le catalogue</a>
+                <a href="#contact" class="btn btn-secondary">Obtenir une solution adaptée</a>
+            </div>
         </div>
     </section>
 
     <!-- CATALOGUE AGENTS -->
-    <section id="agents">
-        <h2>Découvrez nos agents IA</h2>
-        <p>Des agents IA prêts à l'emploi pour automatiser les tâches clés de votre activité.<br>
-        Utilisables seuls ou combinés, selon vos besoins.</p>
+    <section id="agents" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Découvrez nos agents IA</h2>
+                <p class="section-subtitle">Des agents IA prêts à l'emploi pour automatiser les tâches clés de votre activité. Utilisables seuls ou combinés, selon vos besoins.</p>
+            </div>
 
-        <!-- CATÉGORIE : ACQUISITION -->
-        <div class="category-block">
-            <h3>Acquisition</h3>
-        </div>
+            <!-- CATÉGORIE : ACQUISITION -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h3>Acquisition</h3>
+                </div>
 
-        <div class="agents-grid">
-            <!-- Agent 1 : Gabriel -->
-            <div class="agent-card">
-                <div class="agent-header">
-                    <div class="icon-container">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-                        </svg>
+                <div class="cards-grid">
+                    <!-- Agent 1 : Gabriel -->
+                    <div class="card agent-card">
+                        <div class="agent-header">
+                            <div class="agent-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="agent-title-group">
+                                <h3>Gabriel — Agent vocal</h3>
+                                <p class="agent-tagline">Répond et qualifie vos appels 24/7</p>
+                            </div>
+                        </div>
+                        <p class="agent-description">Ne ratez plus jamais un appel important. Votre agent dialogue avec vos appelants, comprend leurs besoins et enregistre automatiquement les informations clés.</p>
+                        <ul class="agent-features">
+                            <li>Conversation naturelle 24/7</li>
+                            <li>Qualification du besoin en temps réel</li>
+                            <li>Collecte automatique des informations</li>
+                            <li>Transfert vers un humain en cas de besoin</li>
+                        </ul>
                     </div>
-                    <div class="agent-text">
-                        <h3>Gabriel — Agent vocal</h3>
-                        <p class="agent-tagline">Répond et qualifie vos appels 24/7</p>
+
+                    <!-- Agent 2 : Noah -->
+                    <div class="card agent-card">
+                        <div class="agent-header">
+                            <div class="agent-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 010 7.75"/>
+                                </svg>
+                            </div>
+                            <div class="agent-title-group">
+                                <h3>Noah — Agent de qualification de leads</h3>
+                                <p class="agent-tagline">Transforme vos visiteurs en opportunités qualifiées</p>
+                            </div>
+                        </div>
+                        <p class="agent-description">Noah qualifie automatiquement vos visiteurs, identifie les opportunités à fort potentiel et déclenche la bonne action au bon moment.</p>
+                        <ul class="agent-features">
+                            <li>Qualification des besoins en temps réel</li>
+                            <li>Scoring personnalisé selon vos critères</li>
+                            <li>Recommandation automatique du service adapté</li>
+                            <li>Proposition instantanée de rendez-vous</li>
+                            <li>Enregistrement complet dans votre CRM</li>
+                        </ul>
+                    </div>
+
+                    <!-- Agent 3 : Clara -->
+                    <div class="card agent-card">
+                        <div class="agent-header">
+                            <div class="agent-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                            </div>
+                            <div class="agent-title-group">
+                                <h3>Clara — Agent de planification</h3>
+                                <p class="agent-tagline">Prend, modifie et organise vos rendez-vous</p>
+                            </div>
+                        </div>
+                        <p class="agent-description">Fini les allers-retours interminables pour trouver un créneau. Vos agendas se remplissent automatiquement et vos clients reçoivent leurs rappels.</p>
+                        <ul class="agent-features">
+                            <li>Prise, modification et annulation de rendez-vous en autonomie</li>
+                            <li>Synchronisation en temps réel avec vos agendas</li>
+                            <li>Rappels automatiques pour réduire les absences</li>
+                            <li>Gestion multi-interlocuteurs et multi-agendas</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Agent 2 : Noah -->
-            <div class="agent-card">
-                <div class="agent-header">
-                    <div class="icon-container">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
-                            <path d="M16 3.13a4 4 0 010 7.75"/>
-                        </svg>
+            <!-- CATÉGORIE : CONVERSION -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h3>Conversion</h3>
+                </div>
+
+                <div class="cards-grid">
+                    <!-- Agent 4 : Léa -->
+                    <div class="card agent-card">
+                        <div class="agent-header">
+                            <div class="agent-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div class="agent-title-group">
+                                <h3>Léa — Agent de suivi et relance commerciale</h3>
+                                <p class="agent-tagline">Relance vos prospects et fait avancer vos opportunités</p>
+                            </div>
+                        </div>
+                        <p class="agent-description">Aucun prospect ne tombe dans l'oubli. Chaque opportunité est relancée au bon moment avec le message le plus pertinent, automatiquement.</p>
+                        <ul class="agent-features">
+                            <li>Relances automatiques selon le stade de maturité</li>
+                            <li>Messages adaptés au comportement et aux objections</li>
+                            <li>Détection des signaux faibles et opportunités à risque</li>
+                            <li>Réactivation des leads froids et clients inactifs</li>
+                        </ul>
                     </div>
-                    <div class="agent-text">
-                        <h3>Noah — Agent de qualification de leads</h3>
-                        <p class="agent-tagline">Transforme vos visiteurs en opportunités qualifiées</p>
+
+                    <!-- Agent 5 : Nathan -->
+                    <div class="card agent-card">
+                        <div class="agent-header">
+                            <div class="agent-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                    <line x1="16" y1="13" x2="8" y2="13"/>
+                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                    <polyline points="10 9 9 9 8 9"/>
+                                </svg>
+                            </div>
+                            <div class="agent-title-group">
+                                <h3>Nathan — Agent de chiffrage</h3>
+                                <p class="agent-tagline">Génère des devis estimatifs en quelques minutes</p>
+                            </div>
+                        </div>
+                        <p class="agent-description">Répondez aux demandes de prix en quelques minutes plutôt qu'en plusieurs jours. Accélérez votre cycle de vente tout en évaluant le sérieux du prospect.</p>
+                        <ul class="agent-features">
+                            <li>Collecte du besoin par échange guidé</li>
+                            <li>Calcul automatique selon votre grille tarifaire</li>
+                            <li>Envoi d'un email professionnel avec devis estimatif</li>
+                            <li>Suivi des devis en cours</li>
+                        </ul>
+                    </div>
+
+                    <!-- Agent 6 : Mia -->
+                    <div class="card agent-card">
+                        <div class="agent-header">
+                            <div class="agent-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="18" y1="20" x2="18" y2="10"/>
+                                    <line x1="12" y1="20" x2="12" y2="4"/>
+                                    <line x1="6" y1="20" x2="6" y2="14"/>
+                                </svg>
+                            </div>
+                            <div class="agent-title-group">
+                                <h3>Mia — Agent d'analyse et de reporting</h3>
+                                <p class="agent-tagline">Analyse vos données pour améliorer votre activité</p>
+                            </div>
+                        </div>
+                        <p class="agent-description">Transformez vos données dispersées en rapports automatiques pour comprendre ce qui fonctionne, détecter les écarts et décider plus vite.</p>
+                        <ul class="agent-features">
+                            <li>Consolidation automatique de données multi-sources</li>
+                            <li>Rapports personnalisés envoyés automatiquement</li>
+                            <li>Détection des anomalies et opportunités</li>
+                            <li>Prévisions et recommandations concrètes</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Agent 3 : Clara -->
-            <div class="agent-card">
-                <div class="agent-header">
-                    <div class="icon-container">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                            <line x1="16" y1="2" x2="16" y2="6"/>
-                            <line x1="8" y1="2" x2="8" y2="6"/>
-                            <line x1="3" y1="10" x2="21" y2="10"/>
-                        </svg>
-                    </div>
-                    <div class="agent-text">
-                        <h3>Clara — Agent de planification</h3>
-                        <p class="agent-tagline">Prend, modifie et organise vos rendez-vous</p>
-                    </div>
+            <!-- CATÉGORIE : FIDÉLISATION -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h3>Fidélisation</h3>
                 </div>
-            </div>
-        </div>
 
-        <!-- CATÉGORIE : CONVERSION -->
-        <div class="category-block">
-            <h3>Conversion</h3>
-        </div>
+                <div class="cards-grid">
+                    <!-- Agent 7 : Nina -->
+                    <div class="card agent-card">
+                        <div class="agent-header">
+                            <div class="agent-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                                </svg>
+                            </div>
+                            <div class="agent-title-group">
+                                <h3>Nina — Agent de support client</h3>
+                                <p class="agent-tagline">Traite les demandes clients en continu</p>
+                            </div>
+                        </div>
+                        <p class="agent-description">Offrez un support réactif, jour et nuit, sans embaucher. Améliorez la satisfaction client tout en libérant du temps pour votre équipe.</p>
+                        <ul class="agent-features">
+                            <li>Compréhension des questions clients et réponses adaptées</li>
+                            <li>Création et priorisation automatique des demandes clients</li>
+                            <li>Escalade vers un humain en cas de besoin</li>
+                            <li>Suivi du support avec indicateurs clés</li>
+                        </ul>
+                    </div>
 
-        <div class="agents-grid">
-            <!-- Agent 4 : Léa -->
-            <div class="agent-card">
-                <div class="agent-header">
-                    <div class="icon-container">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
-                        </svg>
+                    <!-- Agent 8 : Alex -->
+                    <div class="card agent-card">
+                        <div class="agent-header">
+                            <div class="agent-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="agent-title-group">
+                                <h3>Alex — Agent de gestion des emails</h3>
+                                <p class="agent-tagline">Trie, priorise et prépare vos réponses</p>
+                            </div>
+                        </div>
+                        <p class="agent-description">Reprenez le contrôle total de votre boîte email afin d'en faire un système organisé et actionnable. Gagnez 2h par jour et ne ratez plus jamais un email important.</p>
+                        <ul class="agent-features">
+                            <li>Tri automatique et scoring de priorité en temps réel</li>
+                            <li>Génération de brouillons de réponse par IA</li>
+                            <li>Extraction automatique des tâches et deadlines</li>
+                            <li>Briefing quotidien intelligent chaque matin</li>
+                        </ul>
                     </div>
-                    <div class="agent-text">
-                        <h3>Léa — Agent de suivi et relance commerciale</h3>
-                        <p class="agent-tagline">Relance vos prospects et fait avancer vos opportunités</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Agent 5 : Nathan -->
-            <div class="agent-card">
-                <div class="agent-header">
-                    <div class="icon-container">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
-                            <polyline points="14 2 14 8 20 8"/>
-                            <line x1="16" y1="13" x2="8" y2="13"/>
-                            <line x1="16" y1="17" x2="8" y2="17"/>
-                            <polyline points="10 9 9 9 8 9"/>
-                        </svg>
-                    </div>
-                    <div class="agent-text">
-                        <h3>Nathan — Agent de chiffrage</h3>
-                        <p class="agent-tagline">Génère des devis estimatifs en quelques minutes</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Agent 6 : Mia -->
-            <div class="agent-card">
-                <div class="agent-header">
-                    <div class="icon-container">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="18" y1="20" x2="18" y2="10"/>
-                            <line x1="12" y1="20" x2="12" y2="4"/>
-                            <line x1="6" y1="20" x2="6" y2="14"/>
-                        </svg>
-                    </div>
-                    <div class="agent-text">
-                        <h3>Mia — Agent d'analyse et de reporting</h3>
-                        <p class="agent-tagline">Analyse vos données pour améliorer votre activité</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- CATÉGORIE : FIDÉLISATION -->
-        <div class="category-block">
-            <h3>Fidélisation</h3>
-        </div>
-
-        <div class="agents-grid">
-            <!-- Agent 7 : Nina -->
-            <div class="agent-card">
-                <div class="agent-header">
-                    <div class="icon-container">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-                        </svg>
-                    </div>
-                    <div class="agent-text">
-                        <h3>Nina — Agent de support client</h3>
-                        <p class="agent-tagline">Traite les demandes clients en continu</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Agent 8 : Alex -->
-            <div class="agent-card">
-                <div class="agent-header">
-                    <div class="icon-container">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                    </div>
-                    <div class="agent-text">
-                        <h3>Alex — Agent de gestion des emails</h3>
-                        <p class="agent-tagline">Trie, priorise et prépare vos réponses</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Agent 9 : Ava -->
-            <div class="agent-card">
-                <div class="agent-header">
-                    <div class="icon-container">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                    </div>
-                    <div class="agent-text">
-                        <h3>Ava — Agent d'onboarding client</h3>
-                        <p class="agent-tagline">Guide vos nouveaux clients vers l'autonomie</p>
+                    <!-- Agent 9 : Ava -->
+                    <div class="card agent-card">
+                        <div class="agent-header">
+                            <div class="agent-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <div class="agent-title-group">
+                                <h3>Ava — Agent d'onboarding client</h3>
+                                <p class="agent-tagline">Guide vos nouveaux clients vers l'autonomie</p>
+                            </div>
+                        </div>
+                        <p class="agent-description">Rendez vos nouveaux clients autonomes rapidement, sans solliciter votre équipe à chaque question.</p>
+                        <ul class="agent-features">
+                            <li>Parcours de bienvenue personnalisé et progressif</li>
+                            <li>Ressources et tutoriels envoyés au bon moment</li>
+                            <li>Suivi de la progression avec alertes en cas de blocage</li>
+                            <li>Autonomie accélérée et appels support réduits</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -215,94 +425,94 @@
     </section>
 
     <!-- TRANSITION APRÈS CATALOGUE -->
-    <div class="transition-section">
-        <p>Choisissez les agents qui correspondent à vos besoins et sélectionnez le pack adapté à votre activité.</p>
-        <div class="transition-buttons">
-            <a href="tarifs.html" class="btn btn-primary">Voir les packs</a>
-            <a href="#contact" class="btn btn-secondary">Planifier un échange</a>
+    <div class="transition-cta">
+        <div class="container">
+            <p>Choisissez les agents qui correspondent à vos besoins et sélectionnez le pack adapté à votre activité.</p>
+            <div class="transition-buttons">
+                <a href="tarifs.html" class="btn btn-primary">Voir les packs</a>
+                <a href="#contact" class="btn btn-secondary">Planifier un échange</a>
+            </div>
         </div>
     </div>
 
     <!-- SECTION SUR-MESURE -->
-    <section class="custom-section" id="sur-mesure">
-        <div class="custom-intro">
-            <h2>Votre besoin ne rentre pas parfaitement dans le catalogue ?<br>
-            Nous concevons vos agents sur-mesure.</h2>
-            <p>Quelques exemples d'adaptations réalisées :</p>
-        </div>
-
-        <div class="use-cases">
-            <!-- Cas métier 1 : RH -->
-            <div class="use-case-card">
-                <div class="use-case-header">
-                    <span class="use-case-icon">👥</span>
-                    <h3>Recrutement & RH</h3>
-                </div>
-                <ul>
-                    <li>Analyse et scoring automatique des candidatures</li>
-                    <li>Classification objective des candidatures selon vos critères</li>
-                    <li>Emails personnalisés envoyés aux candidats selon leur statut</li>
-                    <li>Parcours d'intégration structuré pour les nouveaux collaborateurs</li>
-                </ul>
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Votre besoin ne rentre pas parfaitement dans le catalogue ?<br>Nous concevons vos agents sur-mesure.</h2>
+                <p class="section-subtitle">Quelques exemples d'adaptations réalisées :</p>
             </div>
 
-            <!-- Cas métier 2 : Immobilier -->
-            <div class="use-case-card">
-                <div class="use-case-header">
-                    <span class="use-case-icon">🏠</span>
-                    <h3>Immobilier & Services</h3>
+            <div class="use-cases">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="icon-users.svg" alt="RH" class="card-icon-img">
+                        <h3 class="use-case-title">Recrutement & RH</h3>
+                    </div>
+                    <ul class="use-case-list">
+                        <li>Analyse et scoring automatique des candidatures</li>
+                        <li>Classification objective des candidatures selon vos critères</li>
+                        <li>Emails personnalisés envoyés aux candidats selon leur statut</li>
+                        <li>Parcours d'intégration structuré pour les nouveaux collaborateurs</li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>Qualification des demandes (achat, location, estimation)</li>
-                    <li>Orientation automatique selon le type de bien et le budget</li>
-                    <li>Prise de rendez-vous avec le bon interlocuteur</li>
-                    <li>Rappels automatiques pour réduire les rendez-vous non honorés</li>
-                </ul>
+
+                <div class="card">
+                    <div class="card-header">
+                        <img src="icon-home.svg" alt="Immobilier" class="card-icon-img">
+                        <h3 class="use-case-title">Immobilier & Services</h3>
+                    </div>
+                    <ul class="use-case-list">
+                        <li>Qualification des demandes (achat, location, estimation)</li>
+                        <li>Orientation automatique selon le type de bien et le budget</li>
+                        <li>Prise de rendez-vous avec le bon interlocuteur</li>
+                        <li>Rappels automatiques pour réduire les rendez-vous non honorés</li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <p class="disclaimer">Ces exemples illustrent nos adaptations métiers.<br>
-        Votre besoin est différent ? Parlons-en.</p>
+            <p class="section-disclaimer">Ces exemples illustrent nos adaptations métiers.<br>Votre besoin est différent ? Parlons-en.</p>
 
-        <div class="custom-cta">
-            <a href="#contact" class="btn btn-primary">Obtenir une solution adaptée</a>
+            <div class="cta-button-wrapper">
+                <a href="#contact" class="btn btn-primary">Obtenir une solution adaptée</a>
+            </div>
         </div>
     </section>
 
     <!-- SECTION CONTACT -->
-    <section id="contact" style="background: var(--color-grey-light);">
-        <h2>Prêt à démarrer ?</h2>
-        <p>Planifions un échange pour discuter de vos besoins.</p>
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="mailto:oraiagents@gmail.com" class="btn btn-primary">oraiagents@gmail.com</a>
+    <section id="contact" class="section section-cta">
+        <div class="container">
+            <h2 class="section-title-center">Prêt à démarrer ?</h2>
+            <p class="cta-text">Planifions un échange pour discuter de vos besoins.</p>
+            <div class="cta-button-wrapper">
+                <a href="mailto:oraiagents@gmail.com" class="btn btn-primary btn-large">oraiagents@gmail.com</a>
+            </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>OR AI Agents</h4>
-                <p>Agents IA intelligents pour automatiser votre entreprise.</p>
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-about">
+                <img src="OR-AI-AGENTS-FINAL-LIGHT.svg" alt="OR AI Agents" class="footer-logo">
+                <p class="footer-tagline">Agents IA intelligents pour automatiser votre entreprise.</p>
             </div>
-            <div class="footer-section">
-                <h4>Navigation</h4>
+            <div class="footer-links">
+                <h4 class="footer-title">Navigation</h4>
                 <ul>
                     <li><a href="#agents">Nos agents</a></li>
                     <li><a href="tarifs.html">Tarifs</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <ul>
-                    <li><a href="mailto:oraiagents@gmail.com">oraiagents@gmail.com</a></li>
-                    <li>06 61 26 75 19</li>
-                    <li>Cannes, Côte d'Azur</li>
-                </ul>
+            <div class="footer-contact">
+                <h4 class="footer-title">Contact</h4>
+                <p><a href="mailto:oraiagents@gmail.com">oraiagents@gmail.com</a></p>
+                <p>06 61 26 75 19</p>
+                <p>Cannes, Côte d'Azur</p>
             </div>
-            <div class="footer-section">
-                <h4>Légal</h4>
+            <div class="footer-links">
+                <h4 class="footer-title">Légal</h4>
                 <ul>
                     <li><a href="mentions-legales.html">Mentions légales</a></li>
                     <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>

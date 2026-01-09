@@ -1,34 +1,86 @@
 // OR AI AGENTS - SCRIPT.JS
-// Interactions basiques pour le site
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Smooth scroll pour les liens d'ancrage
+    // ===================================
+    // Navigation Mobile Toggle
+    // ===================================
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (navToggle) {
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+    }
+    
+    // Fermer le menu mobile au clic sur un lien
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+            if (navToggle) {
+                navToggle.classList.remove('active');
+            }
+        });
+    });
+    
+    // ===================================
+    // Smooth Scroll
+    // ===================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
             
             // Ignorer les liens vides
-            if (href === '#') return;
+            if (href === '#' || href === '#!') {
+                e.preventDefault();
+                return;
+            }
             
-            e.preventDefault();
             const target = document.querySelector(href);
-            
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                e.preventDefault();
+                const navHeight = document.querySelector('.nav').offsetHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
             }
         });
     });
-
-    // Animation au scroll pour les cartes agents
+    
+    // ===================================
+    // Hide Nav on Scroll Down
+    // ===================================
+    let lastScrollTop = 0;
+    const nav = document.querySelector('.nav');
+    
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scroll down
+            nav.classList.add('hidden');
+        } else {
+            // Scroll up
+            nav.classList.remove('hidden');
+        }
+        
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+    
+    // ===================================
+    // Intersection Observer for Cards
+    // ===================================
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-
+    
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -36,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 entry.target.style.transform = 'translateY(20px)';
                 
                 setTimeout(() => {
-                    entry.target.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
                 }, 100);
@@ -45,25 +97,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, observerOptions);
-
-    // Observer toutes les cartes agents
-    document.querySelectorAll('.agent-card').forEach(card => {
+    
+    // Observer toutes les cartes
+    document.querySelectorAll('.card, .agent-card, .pricing-card').forEach(card => {
         observer.observe(card);
     });
-
-    // Observer les cartes de packs (sur la page tarifs)
-    document.querySelectorAll('.pack-card').forEach(card => {
-        observer.observe(card);
-    });
-
-    // Activer le lien de navigation actif
+    
+    // ===================================
+    // Active Nav Link
+    // ===================================
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-            link.style.color = 'var(--color-gold)';
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        const linkHref = link.getAttribute('href');
+        if (linkHref === currentPage || 
+            (currentPage === 'index.html' && linkHref === 'index.html') ||
+            (currentPage === 'tarifs.html' && linkHref === 'tarifs.html')) {
+            link.style.color = 'var(--color-secondary)';
             link.style.fontWeight = '600';
         }
     });
-
-    console.log('OR AI Agents - Site chargé ✅');
+    
+    console.log('✅ OR AI Agents - Site chargé');
 });

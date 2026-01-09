@@ -7,253 +7,308 @@
     <title>Tarifs - OR AI Agents</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .tarifs-hero {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 4rem 2rem 3rem;
+        /* Styles spécifiques page tarifs */
+        .pricing-hero {
+            padding: var(--spacing-lg) 0 var(--spacing-md);
             text-align: center;
         }
-
-        .tarifs-hero h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
+        
+        .pricing-hero h1 {
+            margin-bottom: var(--spacing-sm);
         }
-
-        .tarifs-hero p {
+        
+        .pricing-hero p {
             font-size: 1.1rem;
-            color: var(--color-grey);
+            color: var(--color-text-light);
+            max-width: 700px;
+            margin: 0 auto;
         }
-
-        .packs-grid {
+        
+        .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto 4rem;
-            padding: 0 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
         }
-
-        .pack-card {
-            background: var(--color-white);
-            border: 2px solid #e0e0e0;
-            border-radius: 16px;
-            padding: 2.5rem;
-            transition: var(--transition-smooth);
+        
+        .pricing-card {
+            background: white;
+            border: 2px solid var(--color-border);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            transition: var(--transition);
             display: flex;
             flex-direction: column;
         }
-
-        .pack-card:hover {
-            border-color: var(--color-gold);
-            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.15);
-            transform: translateY(-4px);
+        
+        .pricing-card:hover {
+            border-color: var(--color-secondary);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.20);
+            transform: translateY(-5px);
         }
-
-        .pack-name {
+        
+        .pricing-name {
             font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--color-black);
+            color: var(--color-text);
+            margin-bottom: var(--spacing-md);
+            text-align: center;
         }
-
-        .pack-pricing {
-            margin-bottom: 2rem;
+        
+        .pricing-amounts {
+            text-align: center;
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 2px solid var(--color-bg-alt);
         }
-
-        .pack-setup {
+        
+        .pricing-setup {
             font-size: 1.75rem;
-            font-weight: 600;
-            color: var(--color-gold);
-            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin-bottom: 0.25rem;
         }
-
-        .pack-monthly {
+        
+        .pricing-setup-label {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .pricing-monthly {
             font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--color-black);
+            font-weight: 700;
+            color: var(--color-text);
         }
-
-        .pack-features {
+        
+        .pricing-monthly-label {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+        }
+        
+        .pricing-features {
             list-style: none;
-            margin-bottom: 2rem;
+            padding: 0;
+            margin-bottom: var(--spacing-md);
             flex-grow: 1;
         }
-
-        .pack-features li {
+        
+        .pricing-features li {
             padding: 0.75rem 0;
             padding-left: 1.75rem;
             position: relative;
-            color: var(--color-grey);
+            color: var(--color-text);
+            border-bottom: 1px solid var(--color-bg-alt);
             line-height: 1.5;
-            border-bottom: 1px solid #f0f0f0;
         }
-
-        .pack-features li:last-child {
+        
+        .pricing-features li:last-child {
             border-bottom: none;
         }
-
-        .pack-features li::before {
-            content: "✓";
-            color: var(--color-gold);
-            font-weight: 700;
-            font-size: 1.1rem;
+        
+        .pricing-features li::before {
+            content: '✓';
             position: absolute;
             left: 0;
+            color: var(--color-secondary);
+            font-weight: bold;
+            font-size: 1.2rem;
         }
-
-        .pack-cta {
+        
+        .pricing-cta {
             margin-top: auto;
         }
-
-        .legal-mention {
+        
+        .pricing-cta .btn {
+            width: 100%;
             text-align: center;
-            color: var(--color-grey);
+        }
+        
+        .legal-notice {
+            text-align: center;
+            color: var(--color-text-light);
             font-size: 0.9rem;
             font-style: italic;
-            margin: 2rem 0 3rem;
+            margin: var(--spacing-md) 0;
         }
-
-        .custom-solution {
-            background: var(--color-grey-light);
-            padding: 4rem 2rem;
+        
+        .custom-pricing {
+            background: var(--color-bg-alt);
+            padding: var(--spacing-lg) 0;
+            margin-top: var(--spacing-lg);
+        }
+        
+        .custom-pricing h2 {
+            text-align: center;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .custom-pricing-content {
+            max-width: 700px;
+            margin: 0 auto var(--spacing-md);
             text-align: center;
         }
-
-        .custom-solution h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+        
+        .custom-pricing-content p {
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-sm);
         }
-
-        .custom-solution p {
-            font-size: 1.1rem;
-            color: var(--color-grey);
-            max-width: 700px;
-            margin: 0 auto 2rem;
+        
+        .custom-pricing-details {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            margin-top: var(--spacing-sm);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="OR-AI-AGENTS-FINAL-DARK.svg" alt="OR AI Agents">
-                </a>
-            </div>
-            <ul class="nav-links">
+    <!-- NAVIGATION -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <img src="OR-AI-AGENTS-FINAL-DARK.svg" alt="OR AI Agents" class="logo">
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
                 <li><a href="index.html#agents">Agents</a></li>
                 <li><a href="tarifs.html">Tarifs</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- HERO TARIFS -->
-    <div class="tarifs-hero">
-        <h1>Tarifs</h1>
-        <p>Choisissez le pack adapté à vos besoins.<br>
-        Setup unique + abonnement mensuel sans engagement.</p>
-    </div>
+    <section class="section pricing-hero">
+        <div class="container">
+            <h1>Tarifs</h1>
+            <p>Choisissez le pack adapté à vos besoins.<br>
+            Setup unique + abonnement mensuel sans engagement.</p>
+        </div>
+    </section>
 
     <!-- PACKS -->
-    <div class="packs-grid">
-        
-        <!-- PACK STARTER -->
-        <div class="pack-card">
-            <h3 class="pack-name">Pack Starter</h3>
-            <div class="pack-pricing">
-                <div class="pack-setup">Setup : 490 €</div>
-                <div class="pack-monthly">99 € / mois</div>
+    <section class="section section-compact">
+        <div class="container">
+            <div class="pricing-grid">
+                
+                <!-- PACK STARTER -->
+                <div class="pricing-card">
+                    <h3 class="pricing-name">Pack Starter</h3>
+                    <div class="pricing-amounts">
+                        <div class="pricing-setup">490 €</div>
+                        <div class="pricing-setup-label">Setup</div>
+                        <div class="pricing-monthly">99 € / mois</div>
+                        <div class="pricing-monthly-label">Abonnement</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>2 agents</li>
+                        <li>Support standard</li>
+                        <li>Maintenance incluse</li>
+                        <li>Fonctionnement défini au lancement</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <a href="index.html#contact" class="btn btn-primary">Démarrer</a>
+                    </div>
+                </div>
+
+                <!-- PACK BUSINESS -->
+                <div class="pricing-card">
+                    <h3 class="pricing-name">Pack Business</h3>
+                    <div class="pricing-amounts">
+                        <div class="pricing-setup">1 190 €</div>
+                        <div class="pricing-setup-label">Setup</div>
+                        <div class="pricing-monthly">239 € / mois</div>
+                        <div class="pricing-monthly-label">Abonnement</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>5 agents</li>
+                        <li>Support prioritaire</li>
+                        <li>Maintenance incluse</li>
+                        <li>Ajustements au démarrage inclus</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <a href="index.html#contact" class="btn btn-primary">Démarrer</a>
+                    </div>
+                </div>
+
+                <!-- PACK AUTOMATION -->
+                <div class="pricing-card">
+                    <h3 class="pricing-name">Pack Automation</h3>
+                    <div class="pricing-amounts">
+                        <div class="pricing-setup">2 190 €</div>
+                        <div class="pricing-setup-label">Setup</div>
+                        <div class="pricing-monthly">399 € / mois</div>
+                        <div class="pricing-monthly-label">Abonnement</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>9 agents</li>
+                        <li>Support dédié</li>
+                        <li>Maintenance incluse</li>
+                        <li>Ajustements continus selon les retours d'usage</li>
+                        <li>Adaptation du fonctionnement existant</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <a href="index.html#contact" class="btn btn-primary">Démarrer</a>
+                    </div>
+                </div>
+
             </div>
-            <ul class="pack-features">
-                <li>2 agents</li>
-                <li>Support standard</li>
-                <li>Maintenance incluse</li>
-                <li>Fonctionnement défini au lancement</li>
-            </ul>
-            <div class="pack-cta">
-                <a href="index.html#contact" class="btn btn-primary" style="width: 100%; text-align: center;">Démarrer</a>
-            </div>
+
+            <p class="legal-notice">TVA non applicable, art. 293 B du CGI</p>
         </div>
-
-        <!-- PACK BUSINESS -->
-        <div class="pack-card">
-            <h3 class="pack-name">Pack Business</h3>
-            <div class="pack-pricing">
-                <div class="pack-setup">Setup : 1 190 €</div>
-                <div class="pack-monthly">239 € / mois</div>
-            </div>
-            <ul class="pack-features">
-                <li>5 agents</li>
-                <li>Support prioritaire</li>
-                <li>Maintenance incluse</li>
-                <li>Ajustements au démarrage inclus</li>
-            </ul>
-            <div class="pack-cta">
-                <a href="index.html#contact" class="btn btn-primary" style="width: 100%; text-align: center;">Démarrer</a>
-            </div>
-        </div>
-
-        <!-- PACK AUTOMATION -->
-        <div class="pack-card">
-            <h3 class="pack-name">Pack Automation</h3>
-            <div class="pack-pricing">
-                <div class="pack-setup">Setup : 2 190 €</div>
-                <div class="pack-monthly">399 € / mois</div>
-            </div>
-            <ul class="pack-features">
-                <li>9 agents</li>
-                <li>Support dédié</li>
-                <li>Maintenance incluse</li>
-                <li>Ajustements continus selon les retours d'usage</li>
-                <li>Adaptation du fonctionnement existant</li>
-            </ul>
-            <div class="pack-cta">
-                <a href="index.html#contact" class="btn btn-primary" style="width: 100%; text-align: center;">Démarrer</a>
-            </div>
-        </div>
-
-    </div>
-
-    <p class="legal-mention">TVA non applicable, art. 293 B du CGI</p>
+    </section>
 
     <!-- SOLUTION SUR-MESURE -->
-    <section class="custom-solution">
-        <h2>Besoin d'une solution plus spécifique ?</h2>
-        <p>Votre projet nécessite des fonctionnalités particulières, des intégrations complexes ou un nombre d'agents différent ?<br><br>
-        Nous réalisons un audit approfondi pour concevoir la solution parfaitement adaptée à vos besoins.</p>
-        <a href="index.html#contact" class="btn btn-primary">Demander un audit</a>
-        <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--color-grey);">Audit : 300€ (déduit si projet lancé) • Implémentation : Sur devis</p>
+    <section class="custom-pricing">
+        <div class="container">
+            <h2>Besoin d'une solution plus spécifique ?</h2>
+            <div class="custom-pricing-content">
+                <p>Votre projet nécessite des fonctionnalités particulières, des intégrations complexes ou un nombre d'agents différent ?</p>
+                <p>Nous réalisons un audit approfondi pour concevoir la solution parfaitement adaptée à vos besoins.</p>
+            </div>
+            <div class="cta-button-wrapper">
+                <a href="index.html#contact" class="btn btn-primary">Demander un audit</a>
+            </div>
+            <p class="custom-pricing-details">Audit : 300€ (déduit si projet lancé) • Implémentation : Sur devis</p>
+        </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>OR AI Agents</h4>
-                <p>Agents IA intelligents pour automatiser votre entreprise.</p>
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-about">
+                <img src="OR-AI-AGENTS-FINAL-LIGHT.svg" alt="OR AI Agents" class="footer-logo">
+                <p class="footer-tagline">Agents IA intelligents pour automatiser votre entreprise.</p>
             </div>
-            <div class="footer-section">
-                <h4>Navigation</h4>
+            <div class="footer-links">
+                <h4 class="footer-title">Navigation</h4>
                 <ul>
                     <li><a href="index.html#agents">Nos agents</a></li>
                     <li><a href="tarifs.html">Tarifs</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <ul>
-                    <li><a href="mailto:oraiagents@gmail.com">oraiagents@gmail.com</a></li>
-                    <li>06 61 26 75 19</li>
-                    <li>Cannes, Côte d'Azur</li>
-                </ul>
+            <div class="footer-contact">
+                <h4 class="footer-title">Contact</h4>
+                <p><a href="mailto:oraiagents@gmail.com">oraiagents@gmail.com</a></p>
+                <p>06 61 26 75 19</p>
+                <p>Cannes, Côte d'Azur</p>
             </div>
-            <div class="footer-section">
-                <h4>Légal</h4>
+            <div class="footer-links">
+                <h4 class="footer-title">Légal</h4>
                 <ul>
                     <li><a href="mentions-legales.html">Mentions légales</a></li>
                     <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
