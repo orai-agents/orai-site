@@ -12,6 +12,22 @@
             color: #2D2D2D;
         }
         
+        /* Logo cliquable */
+        .logo {
+            cursor: pointer;
+        }
+        
+        /* Menu - Planifier un échange en doré */
+        .nav-cta {
+            color: var(--color-secondary) !important;
+            border-color: var(--color-secondary) !important;
+        }
+        
+        .nav-cta:hover {
+            background: var(--color-secondary) !important;
+            color: var(--color-primary) !important;
+        }
+        
         /* Hero avec fond beige */
         .hero {
             background: var(--color-bg-alt);
@@ -76,34 +92,50 @@
             font-size: clamp(1.5rem, 3vw, 2.2rem);
         }
         
-        /* Catégories encadrées */
+        /* Catégories - bandeau seulement */
         .category-wrapper {
-            border: 2px solid var(--color-border);
-            border-radius: var(--border-radius);
-            padding: var(--spacing-md);
             margin: var(--spacing-lg) 0;
-            background: white;
         }
         
-        .category-title {
+        .category-header {
             background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
-            color: white;
-            padding: var(--spacing-sm) var(--spacing-md);
-            border-radius: var(--border-radius);
+            padding: var(--spacing-xs) 0;
             text-align: center;
             margin-bottom: var(--spacing-md);
-            max-width: 300px;
-            margin-left: auto;
-            margin-right: auto;
+            position: relative;
         }
         
-        .category-title h3 {
-            font-size: 1.15rem;
+        .category-header::before,
+        .category-header::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+            background: var(--color-secondary);
+        }
+        
+        .category-header::before {
+            right: 100%;
+            margin-right: var(--spacing-md);
+        }
+        
+        .category-header::after {
+            left: 100%;
+            margin-left: var(--spacing-md);
+        }
+        
+        .category-header h3 {
+            display: inline-block;
+            font-size: 1rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            color: white;
+            letter-spacing: 3px;
+            color: var(--color-secondary);
             margin: 0;
+            padding: 0 var(--spacing-md);
+            background: white;
+            position: relative;
         }
         
         /* Grille agents - 3 colonnes */
@@ -116,6 +148,11 @@
         @media (max-width: 1024px) {
             .agents-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .category-header::before,
+            .category-header::after {
+                display: none;
             }
         }
         
@@ -208,7 +245,7 @@
         
         /* Transition CTA - espace réduit */
         .transition-cta {
-            padding: var(--spacing-md) 0;
+            padding: var(--spacing-sm) 0;
             text-align: center;
         }
         
@@ -252,61 +289,6 @@
             margin-bottom: var(--spacing-sm);
             text-align: center;
         }
-        
-        .custom-process {
-            max-width: 900px;
-            margin: var(--spacing-lg) auto;
-        }
-        
-        .custom-process h3 {
-            text-align: center;
-            margin-bottom: var(--spacing-md);
-            font-size: 1.4rem;
-        }
-        
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-lg);
-        }
-        
-        @media (max-width: 768px) {
-            .process-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .process-step {
-            text-align: center;
-            padding: var(--spacing-md);
-        }
-        
-        .process-number {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto var(--spacing-sm);
-        }
-        
-        .process-step h4 {
-            font-size: 1.1rem;
-            margin-bottom: var(--spacing-xs);
-            color: #2D2D2D;
-        }
-        
-        .process-step p {
-            font-size: 0.95rem;
-            color: var(--color-text-light);
-            line-height: 1.5;
-        }
     </style>
 </head>
 <body>
@@ -314,7 +296,9 @@
     <!-- NAVIGATION -->
     <nav class="nav">
         <div class="container nav-container">
-            <img src="OR-AI-LOGO-HEADER.svg" alt="OR AI Agents" class="logo">
+            <a href="index.html">
+                <img src="OR-AI-LOGO-HEADER.svg" alt="OR AI Agents" class="logo">
+            </a>
             <button class="nav-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
@@ -333,12 +317,12 @@
     <!-- HERO -->
     <section class="hero">
         <div class="container hero-content">
-            <h1 class="hero-title">Des Agents IA qui travaillent 24/7<br>pour votre entreprise</h1>
+            <h1 class="hero-title">Des Agents IA qui travaillent 24/7<br>pour votre entreprise.</h1>
             <p class="hero-subtitle">Répondre aux appels, qualifier vos prospects, gérer vos demandes clients — et bien plus encore.<br>
             Votre premier collaborateur IA, adapté à votre métier.</p>
             <div class="hero-cta">
                 <a href="#agents" class="btn btn-primary">Voir le catalogue</a>
-                <a href="#contact" class="btn btn-secondary">Obtenir une solution adaptée</a>
+                <a href="#contact" class="btn btn-secondary">Obtenir une solution personnalisée</a>
             </div>
         </div>
     </section>
@@ -353,7 +337,7 @@
 
             <!-- CATÉGORIE : ACQUISITION -->
             <div class="category-wrapper">
-                <div class="category-title">
+                <div class="category-header">
                     <h3>Acquisition</h3>
                 </div>
 
@@ -435,7 +419,7 @@
 
             <!-- CATÉGORIE : CONVERSION -->
             <div class="category-wrapper">
-                <div class="category-title">
+                <div class="category-header">
                     <h3>Conversion</h3>
                 </div>
 
@@ -517,7 +501,7 @@
 
             <!-- CATÉGORIE : FIDÉLISATION -->
             <div class="category-wrapper">
-                <div class="category-title">
+                <div class="category-header">
                     <h3>Fidélisation</h3>
                 </div>
 
@@ -605,34 +589,61 @@
         </div>
     </div>
 
+    <!-- SECTION COMMENT ÇA MARCHE -->
+    <section id="comment-ca-marche" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Comment ça marche</h2>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-step-header">
+                        <img src="number-1.svg" alt="1" class="process-number-img">
+                        <h3 class="process-title">Rendez-vous de présentation (gratuit)</h3>
+                    </div>
+                    <ul class="process-list">
+                        <li>Vous nous présentez votre activité et vos enjeux</li>
+                        <li>Nous vous montrons des exemples concrets d'assistants IA</li>
+                        <li>Nous évaluons ensemble si l'IA est pertinente et utile dans votre cas</li>
+                        <li>Nous vous expliquons la démarche et donnons des ordres de grandeur</li>
+                    </ul>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step-header">
+                        <img src="number-2.svg" alt="2" class="process-number-img">
+                        <h3 class="process-title">Audit approfondi (si le projet est confirmé)</h3>
+                    </div>
+                    <ul class="process-list">
+                        <li>Nous analysons en détail vos processus et vos besoins</li>
+                        <li>Nous vous proposons une solution adaptée à votre contexte</li>
+                        <li>Vous recevez un document complet avec recommandations et chiffrage précis</li>
+                    </ul>
+                    <p class="process-note">L'investissement est déduit intégralement si le projet est lancé</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step-header">
+                        <img src="number-3.svg" alt="3" class="process-number-img">
+                        <h3 class="process-title">Conception et déploiement</h3>
+                    </div>
+                    <ul class="process-list">
+                        <li>Conception de votre assistant IA sur-mesure, avec tests réguliers</li>
+                        <li>Déploiement sur vos outils existants</li>
+                        <li>Accompagnement à la prise en main et ajustements post-lancement si nécessaire</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- SECTION SUR-MESURE -->
     <section id="sur-mesure" class="section section-alt">
         <div class="container">
             <div class="custom-intro">
                 <h2>Une solution adaptée à chaque entreprise</h2>
-                <p class="custom-intro-text">Chaque entreprise a ses propres enjeux, ses propres processus, ses propres priorités. C'est pourquoi nous ne proposons pas de solutions standardisées, mais des agents IA conçus sur-mesure pour s'intégrer parfaitement à votre activité.</p>
-                <p class="custom-intro-text">Votre besoin ne correspond pas exactement au catalogue ? Nous adaptons nos agents à votre contexte métier spécifique.</p>
-            </div>
-
-            <div class="custom-process">
-                <h3>Notre démarche</h3>
-                <div class="process-grid">
-                    <div class="process-step">
-                        <div class="process-number">1</div>
-                        <h4>Audit approfondi</h4>
-                        <p>Analyse de vos besoins, de vos processus actuels et identification des opportunités d'automatisation.</p>
-                    </div>
-                    <div class="process-step">
-                        <div class="process-number">2</div>
-                        <h4>Conception sur-mesure</h4>
-                        <p>Développement d'agents IA adaptés à vos critères, vos outils et vos workflows spécifiques.</p>
-                    </div>
-                    <div class="process-step">
-                        <div class="process-number">3</div>
-                        <h4>Déploiement accompagné</h4>
-                        <p>Formation de vos équipes, intégration progressive et ajustements selon les retours terrain.</p>
-                    </div>
-                </div>
+                <p class="custom-intro-text">Les agents existants ne correspondent pas exactement à vos besoins ? Nous concevons également des solutions sur-mesure, adaptées à votre contexte et vos processus spécifiques.</p>
             </div>
 
             <h3 style="text-align: center; margin-bottom: var(--spacing-md); font-size: 1.5rem;">Exemples d'adaptations réalisées</h3>
@@ -668,7 +679,7 @@
             <p class="section-disclaimer">Ces exemples illustrent notre approche. Votre besoin est différent ? Parlons-en.</p>
 
             <div class="cta-button-wrapper">
-                <a href="#contact" class="btn btn-primary btn-large">Obtenir une solution adaptée</a>
+                <a href="#contact" class="btn btn-primary btn-large">Obtenir une solution personnalisée</a>
             </div>
         </div>
     </section>
