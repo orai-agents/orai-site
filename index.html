@@ -83,7 +83,7 @@
             border-color: var(--color-accent);
         }
         
-        /* Boutons hero - même largeur */
+        /* Boutons hero - plus larges */
         .hero-cta {
             display: flex;
             gap: var(--spacing-sm);
@@ -93,8 +93,9 @@
         
         .hero-cta .btn {
             flex: 1;
-            min-width: 280px;
-            max-width: 320px;
+            min-width: 320px;
+            max-width: 380px;
+            white-space: nowrap;
         }
         
         @media (max-width: 768px) {
@@ -106,6 +107,7 @@
             .hero-cta .btn {
                 width: 100%;
                 max-width: 100%;
+                white-space: normal;
             }
         }
         
@@ -114,7 +116,7 @@
             font-size: clamp(1.5rem, 3vw, 2.2rem);
         }
         
-        /* Catégories - ligne simple avec titre */
+        /* Catégories - ligne simple avec titre - LIGNES PLUS COURTES */
         .category-wrapper {
             margin: var(--spacing-lg) 0;
         }
@@ -123,6 +125,9 @@
             position: relative;
             text-align: center;
             margin-bottom: var(--spacing-md);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .category-header::before {
@@ -160,6 +165,10 @@
         @media (max-width: 1024px) {
             .agents-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .category-header {
+                max-width: 100%;
             }
         }
         
@@ -250,9 +259,11 @@
             font-weight: bold;
         }
         
-        /* Transition CTA - espace réduit */
+        /* Transition CTA - espace réduit ENCORE PLUS + texte corrigé */
         .transition-cta {
-            padding: var(--spacing-xs) 0 var(--spacing-md);
+            padding: 0;
+            padding-top: var(--spacing-xs);
+            padding-bottom: var(--spacing-xl);
             text-align: center;
         }
         
@@ -268,7 +279,7 @@
         
         .transition-buttons {
             display: flex;
-            gap: var(--spacing-sm);
+            gap: var(--spacing-md);
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -280,7 +291,7 @@
         /* Section sur-mesure développée */
         .custom-intro {
             max-width: 800px;
-            margin: 0 auto var(--spacing-lg);
+            margin: 0 auto var(--spacing-md);
         }
         
         .custom-intro h2 {
@@ -297,17 +308,17 @@
             text-align: center;
         }
         
-        /* Footer élégant comme header */
+        /* Footer élégant - Logo gauche + rubriques droite */
         .footer {
             background: white;
             border-top: 2px solid var(--color-secondary);
             padding: var(--spacing-lg) 0 var(--spacing-md);
         }
         
-        .footer-top {
+        .footer-main {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             padding-bottom: var(--spacing-md);
             border-bottom: 1px solid var(--color-border);
             margin-bottom: var(--spacing-md);
@@ -320,10 +331,11 @@
         
         .footer-nav {
             display: flex;
-            gap: var(--spacing-md);
+            gap: var(--spacing-lg);
             list-style: none;
             margin: 0;
             padding: 0;
+            align-items: center;
         }
         
         .footer-nav a {
@@ -348,6 +360,7 @@
         .footer-contact {
             display: flex;
             gap: var(--spacing-md);
+            align-items: center;
         }
         
         .footer-contact a {
@@ -360,9 +373,10 @@
         }
         
         @media (max-width: 768px) {
-            .footer-top {
+            .footer-main {
                 flex-direction: column;
                 gap: var(--spacing-md);
+                align-items: center;
                 text-align: center;
             }
             
@@ -378,8 +392,8 @@
             }
             
             .footer-contact {
-                flex-direction: column;
-                gap: var(--spacing-xs);
+                flex-wrap: wrap;
+                justify-content: center;
             }
         }
     </style>
@@ -400,7 +414,7 @@
             <ul class="nav-menu">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="#agents">Nos Agents</a></li>
-                <li><a href="#sur-mesure">Solutions personnalisées</a></li>
+                <li><a href="#sur-mesure">Solution personnalisée</a></li>
                 <li><a href="tarifs.html">Nos offres</a></li>
                 <li><a href="#contact" class="nav-cta">Planifier un échange</a></li>
             </ul>
@@ -671,10 +685,10 @@
         </div>
     </section>
 
-    <!-- TRANSITION APRÈS CATALOGUE -->
+    <!-- TRANSITION APRÈS CATALOGUE - TEXTE CORRIGÉ + REMONTÉ + ESPACE BLANC AUGMENTÉ -->
     <div class="transition-cta">
         <div class="container">
-            <p>Choisissez les agents qui correspondent à vos besoins et sélectionnez le pack adapté à votre activité.</p>
+            <p>Choisissez les agents adaptés à vos besoins, puis sélectionnez le pack correspondant.</p>
             <div class="transition-buttons">
                 <a href="tarifs.html" class="btn btn-primary">Voir les packs</a>
                 <a href="#contact" class="btn btn-secondary">Planifier un échange</a>
@@ -686,7 +700,7 @@
     <section id="sur-mesure" class="section section-alt">
         <div class="container">
             <div class="custom-intro">
-                <h2>Des agents sur-mesure, adaptés à votre fonctionnement</h2>
+                <h2>Des agents sur-mesure,<br>adaptés à votre fonctionnement</h2>
                 <p class="custom-intro-text">Les agents existants ne correspondent pas exactement à vos besoins ? Nous concevons également des solutions sur-mesure, adaptées à votre contexte et vos processus spécifiques.</p>
             </div>
 
@@ -722,8 +736,8 @@
 
             <p class="section-disclaimer">Ces exemples illustrent notre approche. Votre besoin est différent ? Parlons-en.</p>
 
-            <!-- SECTION COMMENT ÇA MARCHE (placée ici) -->
-            <div style="margin-top: var(--spacing-xl);">
+            <!-- SECTION COMMENT ÇA MARCHE (placée ici et remontée) -->
+            <div style="margin-top: var(--spacing-md);">
                 <div class="section-header">
                     <h2 class="section-title">Comment ça marche</h2>
                 </div>
@@ -786,10 +800,10 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER - Logo gauche + Rubriques droite -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-top">
+            <div class="footer-main">
                 <div class="footer-logo-section">
                     <a href="index.html">
                         <img src="OR-AI-LOGO-HEADER.svg" alt="OR AI Agents">
@@ -798,7 +812,7 @@
                 <ul class="footer-nav">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="#agents">Nos Agents</a></li>
-                    <li><a href="#sur-mesure">Solutions personnalisées</a></li>
+                    <li><a href="#sur-mesure">Solution personnalisée</a></li>
                     <li><a href="tarifs.html">Nos offres</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
