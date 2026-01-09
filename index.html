@@ -3,281 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OR AI - Assistants IA sur-mesure pour automatiser votre relation client. Qualifiez vos prospects, gérez vos appels 24/7, et optimisez votre support client.">
-    <title>OR AI — Assistants IA sur-mesure</title>
+    <meta name="description" content="Agents IA prêts à l'emploi pour automatiser votre entreprise. Qualification de leads, support client, gestion des emails et plus. À partir de 99€/mois.">
+    <title>OR AI Agents - Agents IA qui travaillent 24/7 pour votre entreprise</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="container nav-container">
-            <div class="nav-logo">
-                <img src="OR-AI-LOGO-HEADER.svg" alt="OR AI" class="logo">
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="OR-AI-AGENTS-FINAL-DARK.svg" alt="OR AI Agents">
+                </a>
             </div>
-            <button class="nav-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="#assistants">Assistants</a></li>
-                <li><a href="#fonctionnalites">Fonctionnalités</a></li>
-                <li><a href="#cas-metier">Cas métier</a></li>
-                <li><a href="#comment-ca-marche">Process</a></li>
-                <li><a href="#contact" class="nav-cta">Discuter de votre projet</a></li>
+            <ul class="nav-links">
+                <li><a href="#agents">Agents</a></li>
+                <li><a href="tarifs.html">Tarifs</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero section-alt">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Des Assistants IA sur-mesure<br class="show-mobile-only"> qui travaillent 24/7<br class="show-mobile-only"> pour votre entreprise
-                </h1>
-                <p class="hero-subtitle">
-                    Répondre aux appels, qualifier vos prospects,<br class="show-mobile-only"> gérer vos demandes clients — et bien plus encore.<br class="show-mobile-only"> Votre premier collaborateur IA, adapté à votre métier.
-                </p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Discuter de votre projet</a>
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Des agents IA qui travaillent 24/7 pour votre entreprise</h1>
+        <p>Répondez aux appels, qualifiez vos prospects, gérez vos demandes clients — 24/7.<br>
+        Concentrez-vous sur l'essentiel, l'IA gère le reste.</p>
+        <div class="hero-buttons">
+            <a href="#agents" class="btn btn-primary">Voir le catalogue</a>
+            <a href="#contact" class="btn btn-secondary">Obtenir une solution adaptée</a>
+        </div>
+    </section>
+
+    <!-- CATALOGUE AGENTS -->
+    <section id="agents">
+        <h2>Découvrez nos agents IA</h2>
+        <p>Des agents IA prêts à l'emploi pour automatiser les tâches clés de votre activité.<br>
+        Utilisables seuls ou combinés, selon vos besoins.</p>
+
+        <!-- CATÉGORIE : ACQUISITION -->
+        <div class="category-block">
+            <h3>Acquisition</h3>
+        </div>
+
+        <div class="agents-grid">
+            <!-- Agent 1 : Gabriel -->
+            <div class="agent-card">
+                <div class="agent-header">
+                    <div class="icon-container">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                    </div>
+                    <div class="agent-text">
+                        <h3>Gabriel — Agent vocal</h3>
+                        <p class="agent-tagline">Répond et qualifie vos appels 24/7</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent 2 : Noah -->
+            <div class="agent-card">
+                <div class="agent-header">
+                    <div class="icon-container">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="agent-text">
+                        <h3>Noah — Agent de qualification de leads</h3>
+                        <p class="agent-tagline">Transforme vos visiteurs en opportunités qualifiées</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent 3 : Clara -->
+            <div class="agent-card">
+                <div class="agent-header">
+                    <div class="icon-container">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <div class="agent-text">
+                        <h3>Clara — Agent de planification</h3>
+                        <p class="agent-tagline">Prend, modifie et organise vos rendez-vous</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CATÉGORIE : CONVERSION -->
+        <div class="category-block">
+            <h3>Conversion</h3>
+        </div>
+
+        <div class="agents-grid">
+            <!-- Agent 4 : Léa -->
+            <div class="agent-card">
+                <div class="agent-header">
+                    <div class="icon-container">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <div class="agent-text">
+                        <h3>Léa — Agent de suivi et relance commerciale</h3>
+                        <p class="agent-tagline">Relance vos prospects et fait avancer vos opportunités</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent 5 : Nathan -->
+            <div class="agent-card">
+                <div class="agent-header">
+                    <div class="icon-container">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
+                    <div class="agent-text">
+                        <h3>Nathan — Agent de chiffrage</h3>
+                        <p class="agent-tagline">Génère des devis estimatifs en quelques minutes</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent 6 : Mia -->
+            <div class="agent-card">
+                <div class="agent-header">
+                    <div class="icon-container">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="18" y1="20" x2="18" y2="10"/>
+                            <line x1="12" y1="20" x2="12" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="14"/>
+                        </svg>
+                    </div>
+                    <div class="agent-text">
+                        <h3>Mia — Agent d'analyse et de reporting</h3>
+                        <p class="agent-tagline">Analyse vos données pour améliorer votre activité</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CATÉGORIE : FIDÉLISATION -->
+        <div class="category-block">
+            <h3>Fidélisation</h3>
+        </div>
+
+        <div class="agents-grid">
+            <!-- Agent 7 : Nina -->
+            <div class="agent-card">
+                <div class="agent-header">
+                    <div class="icon-container">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                        </svg>
+                    </div>
+                    <div class="agent-text">
+                        <h3>Nina — Agent de support client</h3>
+                        <p class="agent-tagline">Traite les demandes clients en continu</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent 8 : Alex -->
+            <div class="agent-card">
+                <div class="agent-header">
+                    <div class="icon-container">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <div class="agent-text">
+                        <h3>Alex — Agent de gestion des emails</h3>
+                        <p class="agent-tagline">Trie, priorise et prépare vos réponses</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent 9 : Ava -->
+            <div class="agent-card">
+                <div class="agent-header">
+                    <div class="icon-container">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <div class="agent-text">
+                        <h3>Ava — Agent d'onboarding client</h3>
+                        <p class="agent-tagline">Guide vos nouveaux clients vers l'autonomie</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Assistants IA -->
-    <section id="assistants" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Quelques exemples d'assistants IA</h2>
-                <p class="section-subtitle">Des assistants conçus sur-mesure,<br class="show-mobile-only"> selon les besoins de chaque activité.</p>
+    <!-- TRANSITION APRÈS CATALOGUE -->
+    <div class="transition-section">
+        <p>Choisissez les agents qui correspondent à vos besoins et sélectionnez le pack adapté à votre activité.</p>
+        <div class="transition-buttons">
+            <a href="tarifs.html" class="btn btn-primary">Voir les packs</a>
+            <a href="#contact" class="btn btn-secondary">Planifier un échange</a>
+        </div>
+    </div>
+
+    <!-- SECTION SUR-MESURE -->
+    <section class="custom-section" id="sur-mesure">
+        <div class="custom-intro">
+            <h2>Votre besoin ne rentre pas parfaitement dans le catalogue ?<br>
+            Nous concevons vos agents sur-mesure.</h2>
+            <p>Quelques exemples d'adaptations réalisées :</p>
+        </div>
+
+        <div class="use-cases">
+            <!-- Cas métier 1 : RH -->
+            <div class="use-case-card">
+                <div class="use-case-header">
+                    <span class="use-case-icon">👥</span>
+                    <h3>Recrutement & RH</h3>
+                </div>
+                <ul>
+                    <li>Analyse et scoring automatique des candidatures</li>
+                    <li>Classification objective des candidatures selon vos critères</li>
+                    <li>Emails personnalisés envoyés aux candidats selon leur statut</li>
+                    <li>Parcours d'intégration structuré pour les nouveaux collaborateurs</li>
+                </ul>
             </div>
 
-            <div class="cards-grid">
-                <!-- Assistant Commercial -->
-                <div class="card">
-                    <div class="card-header">
-                        <img src="icon-briefcase.svg" alt="Assistant Commercial" class="card-icon-img">
-                        <h3 class="card-title">Assistant Commercial IA</h3>
-                    </div>
-                    <p class="card-description">
-                        Qualifie les prospects en temps réel, recommande le service adapté et synchronise automatiquement les rendez-vous dans votre agenda. Chaque demande est analysée et priorisée selon vos critères métier, puis transmise avec un récapitulatif complet, pour vous faire gagner du temps et préparer des échanges à forte valeur ajoutée.
-                    </p>
+            <!-- Cas métier 2 : Immobilier -->
+            <div class="use-case-card">
+                <div class="use-case-header">
+                    <span class="use-case-icon">🏠</span>
+                    <h3>Immobilier & Services</h3>
                 </div>
-
-                <!-- Assistant Vocal -->
-                <div class="card">
-                    <div class="card-header">
-                        <img src="icon-phone.svg" alt="Assistant Vocal" class="card-icon-img">
-                        <h3 class="card-title">Assistant Vocal IA</h3>
-                    </div>
-                    <p class="card-description">
-                        Répond aux appels entrants 24/7, pose les bonnes questions pour qualifier la demande et collecte les informations essentielles. Chaque échange est retranscrit et transmis instantanément par email ou WhatsApp, avec les coordonnées du prospect et un résumé clair de ses besoins.
-                    </p>
-                </div>
-
-                <!-- Assistant Email -->
-                <div class="card">
-                    <div class="card-header">
-                        <img src="icon-mail.svg" alt="Assistant Email" class="card-icon-img">
-                        <h3 class="card-title">Assistant Email Intelligent</h3>
-                    </div>
-                    <p class="card-description">
-                        Trie et analyse automatiquement vos emails entrants, identifie la nature de chaque demande et répond de manière personnalisée selon vos critères. Les messages sont classés, priorisés et orientés vers le bon interlocuteur, avec un récapitulatif clair pour un traitement rapide. Les emails non pertinents sont filtrés automatiquement, les messages prioritaires mis en avant, avec des brouillons de réponse prêts à valider si nécessaire.
-                    </p>
-                </div>
-
-                <!-- Assistant Support -->
-                <div class="card">
-                    <div class="card-header">
-                        <img src="icon-chat.svg" alt="Assistant Support" class="card-icon-img">
-                        <h3 class="card-title">Assistant Support Client IA</h3>
-                    </div>
-                    <p class="card-description">
-                        Répond aux questions fréquentes de vos clients 24/7, avec des réponses personnalisées basées sur votre documentation et vos process. Les demandes complexes sont automatiquement escaladées vers votre équipe, avec tout le contexte de la conversation pour une prise en charge rapide. Les échanges sont archivés et analysés afin d'identifier les problématiques récurrentes et améliorer durablement la qualité de votre service.
-                    </p>
-                </div>
+                <ul>
+                    <li>Qualification des demandes (achat, location, estimation)</li>
+                    <li>Orientation automatique selon le type de bien et le budget</li>
+                    <li>Prise de rendez-vous avec le bon interlocuteur</li>
+                    <li>Rappels automatiques pour réduire les rendez-vous non honorés</li>
+                </ul>
             </div>
+        </div>
 
-            <p class="section-disclaimer">Ces assistants peuvent être adaptés, combinés ou repensés selon vos besoins.</p>
+        <p class="disclaimer">Ces exemples illustrent nos adaptations métiers.<br>
+        Votre besoin est différent ? Parlons-en.</p>
+
+        <div class="custom-cta">
+            <a href="#contact" class="btn btn-primary">Obtenir une solution adaptée</a>
         </div>
     </section>
 
-    <!-- Section Sur-mesure -->
-    <section class="section section-alt section-compact">
-        <div class="container container-narrow">
-            <h2 class="section-title-center">Une solution.<br class="show-mobile-only"> Votre solution.</h2>
-            <div class="text-content">
-                <p>Chaque entreprise a ses propres enjeux, outils et façons de travailler.</p>
-                <p>Un assistant IA efficace ne peut pas être une solution standard : il doit s'adapter à votre activité et à vos systèmes existants.</p>
-                <p>C'est pourquoi chaque projet débute par une analyse de vos besoins réels, afin de concevoir une solution utile, ciblée et sans superflu.</p>
-                <p><strong>Résultat : un assistant parfaitement adapté à votre contexte, ni plus, ni moins.</strong></p>
-            </div>
+    <!-- SECTION CONTACT -->
+    <section id="contact" style="background: var(--color-grey-light);">
+        <h2>Prêt à démarrer ?</h2>
+        <p>Planifions un échange pour discuter de vos besoins.</p>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="mailto:oraiagents@gmail.com" class="btn btn-primary">oraiagents@gmail.com</a>
         </div>
     </section>
 
-    <!-- Section Fonctionnalités -->
-    <section id="fonctionnalites" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Fonctionnalités intégrables</h2>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>OR AI Agents</h4>
+                <p>Agents IA intelligents pour automatiser votre entreprise.</p>
             </div>
-
-            <div class="text-content">
-                <p>Chaque assistant peut être enrichi de composants spécifiques, sélectionnés et combinés selon vos usages réels.<br class="hide-mobile"> Cela permet d'adapter la solution à votre organisation, sans complexité inutile.</p>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#agents">Nos agents</a></li>
+                    <li><a href="tarifs.html">Tarifs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-
-            <div class="features-list">
-                <div class="feature-item">
-                    <h3 class="feature-title">Qualification automatique de leads</h3>
-                    <p class="feature-description">Analyse chaque demande entrante et score le lead selon vos critères métier.</p>
-                </div>
-                <div class="feature-item">
-                    <h3 class="feature-title">Gestion de rendez-vous multi-services</h3>
-                    <p class="feature-description">Décide quand proposer un rendez-vous, avec qui, et dans quel cadre, selon le profil du contact.</p>
-                </div>
-                <div class="feature-item">
-                    <h3 class="feature-title">Priorisation intelligente des demandes</h3>
-                    <p class="feature-description">Classe les demandes entrantes par niveau d'urgence, d'importance ou de traitement, pour un traitement plus efficace.</p>
-                </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:oraiagents@gmail.com">oraiagents@gmail.com</a></li>
+                    <li>06 61 26 75 19</li>
+                    <li>Cannes, Côte d'Azur</li>
+                </ul>
             </div>
-
-            <p class="section-disclaimer">D'autres fonctionnalités peuvent être intégrées ou adaptées selon vos besoins.</p>
-        </div>
-    </section>
-
-    <!-- Section Cas métier -->
-    <section id="cas-metier" class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Cas métier spécifiques</h2>
-            </div>
-
-            <div class="text-content">
-                <p>Voici quelques exemples d'assistants adaptés à des cas d'usage métier récurrents, pouvant être personnalisés selon vos spécificités.</p>
-            </div>
-
-            <div class="use-cases">
-                <div class="use-case card">
-                    <div class="card-header">
-                        <img src="icon-users.svg" alt="Recrutement & RH" class="card-icon-img">
-                        <h3 class="use-case-title">Recrutement & RH</h3>
-                    </div>
-                    <ul class="use-case-list">
-                        <li>Analyse et tri automatique de CV</li>
-                        <li>Assistant onboarding pour nouveaux collaborateurs</li>
-                    </ul>
-                </div>
-
-                <div class="use-case card">
-                    <div class="card-header">
-                        <img src="icon-home.svg" alt="Immobilier & Services" class="card-icon-img">
-                        <h3 class="use-case-title">Immobilier & Services</h3>
-                    </div>
-                    <ul class="use-case-list">
-                        <li>Pré-qualification des demandes entrantes</li>
-                        <li>Orientation des prospects selon le type de projet</li>
-                        <li>Prise de rendez-vous avec les bons interlocuteurs</li>
-                    </ul>
-                </div>
-            </div>
-
-            <p class="section-disclaimer">Ces exemples illustrent certains cas d'usage. Chaque projet est adapté aux enjeux spécifiques de votre activité.</p>
-        </div>
-    </section>
-
-    <!-- Section Comment ça marche -->
-    <section id="comment-ca-marche" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Comment ça marche</h2>
-            </div>
-
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="process-step-header">
-                        <img src="number-1.svg" alt="1" class="process-number-img">
-                        <h3 class="process-title">Rendez-vous de présentation (gratuit)</h3>
-                    </div>
-                    <ul class="process-list">
-                        <li>Vous nous présentez votre activité et vos enjeux</li>
-                        <li>Nous vous montrons des exemples concrets d'assistants IA</li>
-                        <li>Nous évaluons ensemble si l'IA est pertinente et utile dans votre cas</li>
-                        <li>Nous vous expliquons la démarche et donnons des ordres de grandeur</li>
-                    </ul>
-                </div>
-
-                <div class="process-step">
-                    <div class="process-step-header">
-                        <img src="number-2.svg" alt="2" class="process-number-img">
-                        <h3 class="process-title">Audit approfondi (si le projet est confirmé)</h3>
-                    </div>
-                    <ul class="process-list">
-                        <li>Nous analysons en détail vos processus et vos besoins</li>
-                        <li>Nous vous proposons une solution adaptée à votre contexte</li>
-                        <li>Vous recevez un document complet avec recommandations et chiffrage précis</li>
-                    </ul>
-                    <p class="process-note">L'investissement est déduit intégralement si le projet est lancé</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="process-step-header">
-                        <img src="number-3.svg" alt="3" class="process-number-img">
-                        <h3 class="process-title">Conception et déploiement</h3>
-                    </div>
-                    <ul class="process-list">
-                        <li>Conception de votre assistant IA sur-mesure, avec tests réguliers</li>
-                        <li>Déploiement sur vos outils existants</li>
-                        <li>Accompagnement à la prise en main et ajustements post-lancement si nécessaire</li>
-                    </ul>
-                </div>
+            <div class="footer-section">
+                <h4>Légal</h4>
+                <ul>
+                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                </ul>
             </div>
         </div>
-    </section>
-
-    <!-- Section CTA finale -->
-    <section id="contact" class="section section-cta">
-        <div class="container container-narrow">
-            <h2 class="section-title-center">Parlons de votre projet</h2>
-            <p class="cta-text">Un échange gratuit pour comprendre vos besoins<br class="hide-mobile"> et découvrir comment l'IA peut vous aider au quotidien.</p>
-            <div class="cta-button-wrapper">
-                <a href="mailto:oraiagents@gmail.com?subject=Demande de rendez-vous&body=Bonjour,%0D%0A%0D%0AJe souhaite échanger sur un projet d'assistant IA.%0D%0A%0D%0AMon prénom : %0D%0AMon entreprise : %0D%0AMon téléphone : %0D%0A%0D%0AMerci,%0D%0A" class="btn btn-primary btn-large">Planifier un échange</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-main">
-                    <img src="OR-AI-LOGO-HEADER.svg" alt="OR AI" class="footer-logo">
-                    <p class="footer-tagline">Assistants IA sur-mesure</p>
-                </div>
-
-                <div class="footer-contact">
-                    <h3 class="footer-title">Contact</h3>
-                    <p><a href="mailto:oraiagents@gmail.com">oraiagents@gmail.com</a></p>
-                    <p><a href="tel:+33661267519">06 61 26 75 19</a></p>
-                    <p>Cannes, Côte d'Azur</p>
-                </div>
-
-                <div class="footer-links">
-                    <h3 class="footer-title">Liens</h3>
-                    <ul>
-                        <li><a href="mentions-legales.html">Mentions légales</a></li>
-                        <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 OR AI - Tous droits réservés</p>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 OR AI - Tous droits réservés</p>
         </div>
     </footer>
 

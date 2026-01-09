@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tarifs OR AI Agents - Packs d'agents IA à partir de 490€ de setup + 99€/mois. Solutions adaptées à vos besoins.">
+    <title>Tarifs - OR AI Agents</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tarifs-hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+        }
+
+        .tarifs-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .tarifs-hero p {
+            font-size: 1.1rem;
+            color: var(--color-grey);
+        }
+
+        .packs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto 4rem;
+            padding: 0 2rem;
+        }
+
+        .pack-card {
+            background: var(--color-white);
+            border: 2px solid #e0e0e0;
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pack-card:hover {
+            border-color: var(--color-gold);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .pack-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--color-black);
+        }
+
+        .pack-pricing {
+            margin-bottom: 2rem;
+        }
+
+        .pack-setup {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--color-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .pack-monthly {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-black);
+        }
+
+        .pack-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .pack-features li {
+            padding: 0.75rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+            color: var(--color-grey);
+            line-height: 1.5;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .pack-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pack-features li::before {
+            content: "✓";
+            color: var(--color-gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+            position: absolute;
+            left: 0;
+        }
+
+        .pack-cta {
+            margin-top: auto;
+        }
+
+        .legal-mention {
+            text-align: center;
+            color: var(--color-grey);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin: 2rem 0 3rem;
+        }
+
+        .custom-solution {
+            background: var(--color-grey-light);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .custom-solution h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .custom-solution p {
+            font-size: 1.1rem;
+            color: var(--color-grey);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="OR-AI-AGENTS-FINAL-DARK.svg" alt="OR AI Agents">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#agents">Agents</a></li>
+                <li><a href="tarifs.html">Tarifs</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO TARIFS -->
+    <div class="tarifs-hero">
+        <h1>Tarifs</h1>
+        <p>Choisissez le pack adapté à vos besoins.<br>
+        Setup unique + abonnement mensuel sans engagement.</p>
+    </div>
+
+    <!-- PACKS -->
+    <div class="packs-grid">
+        
+        <!-- PACK STARTER -->
+        <div class="pack-card">
+            <h3 class="pack-name">Pack Starter</h3>
+            <div class="pack-pricing">
+                <div class="pack-setup">Setup : 490 €</div>
+                <div class="pack-monthly">99 € / mois</div>
+            </div>
+            <ul class="pack-features">
+                <li>2 agents</li>
+                <li>Support standard</li>
+                <li>Maintenance incluse</li>
+                <li>Fonctionnement défini au lancement</li>
+            </ul>
+            <div class="pack-cta">
+                <a href="index.html#contact" class="btn btn-primary" style="width: 100%; text-align: center;">Démarrer</a>
+            </div>
+        </div>
+
+        <!-- PACK BUSINESS -->
+        <div class="pack-card">
+            <h3 class="pack-name">Pack Business</h3>
+            <div class="pack-pricing">
+                <div class="pack-setup">Setup : 1 190 €</div>
+                <div class="pack-monthly">239 € / mois</div>
+            </div>
+            <ul class="pack-features">
+                <li>5 agents</li>
+                <li>Support prioritaire</li>
+                <li>Maintenance incluse</li>
+                <li>Ajustements au démarrage inclus</li>
+            </ul>
+            <div class="pack-cta">
+                <a href="index.html#contact" class="btn btn-primary" style="width: 100%; text-align: center;">Démarrer</a>
+            </div>
+        </div>
+
+        <!-- PACK AUTOMATION -->
+        <div class="pack-card">
+            <h3 class="pack-name">Pack Automation</h3>
+            <div class="pack-pricing">
+                <div class="pack-setup">Setup : 2 190 €</div>
+                <div class="pack-monthly">399 € / mois</div>
+            </div>
+            <ul class="pack-features">
+                <li>9 agents</li>
+                <li>Support dédié</li>
+                <li>Maintenance incluse</li>
+                <li>Ajustements continus selon les retours d'usage</li>
+                <li>Adaptation du fonctionnement existant</li>
+            </ul>
+            <div class="pack-cta">
+                <a href="index.html#contact" class="btn btn-primary" style="width: 100%; text-align: center;">Démarrer</a>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="legal-mention">TVA non applicable, art. 293 B du CGI</p>
+
+    <!-- SOLUTION SUR-MESURE -->
+    <section class="custom-solution">
+        <h2>Besoin d'une solution plus spécifique ?</h2>
+        <p>Votre projet nécessite des fonctionnalités particulières, des intégrations complexes ou un nombre d'agents différent ?<br><br>
+        Nous réalisons un audit approfondi pour concevoir la solution parfaitement adaptée à vos besoins.</p>
+        <a href="index.html#contact" class="btn btn-primary">Demander un audit</a>
+        <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--color-grey);">Audit : 300€ (déduit si projet lancé) • Implémentation : Sur devis</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>OR AI Agents</h4>
+                <p>Agents IA intelligents pour automatiser votre entreprise.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html#agents">Nos agents</a></li>
+                    <li><a href="tarifs.html">Tarifs</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:oraiagents@gmail.com">oraiagents@gmail.com</a></li>
+                    <li>06 61 26 75 19</li>
+                    <li>Cannes, Côte d'Azur</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Légal</h4>
+                <ul>
+                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 OR AI - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
