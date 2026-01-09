@@ -879,8 +879,9 @@ a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
-    padding: 40px 0;
+    padding: 20px 0;
     border-bottom: 1px solid #e5e5e5;
+    align-items: start;
 }
 
 .footer-col h4 {
@@ -923,7 +924,7 @@ a:hover {
 
 .footer-bottom {
     text-align: center;
-    padding: 20px 0;
+    padding: 12px 0;
     color: #6B7280;
     font-size: 0.9rem;
 }
