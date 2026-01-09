@@ -7,12 +7,26 @@
     <title>OR AI Agents - Agents IA qui travaillent 24/7 pour votre entreprise</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Ajustements spécifiques pour les catégories et agents */
-        .category-section {
+        /* Ajustements hero */
+        .hero-title {
+            font-size: clamp(1.75rem, 3.5vw, 2.8rem);
+        }
+        
+        .hero-cta .btn {
+            min-width: 280px;
+        }
+        
+        /* Titres sections plus petits que hero */
+        .section-title {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+        }
+        
+        /* Catégories */
+        .category-wrapper {
             margin: var(--spacing-lg) 0;
         }
         
-        .category-header {
+        .category-title {
             background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
             color: white;
             padding: var(--spacing-sm) var(--spacing-md);
@@ -24,8 +38,8 @@
             margin-right: auto;
         }
         
-        .category-header h3 {
-            font-size: 1.25rem;
+        .category-title h3 {
+            font-size: 1.15rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -33,6 +47,20 @@
             margin: 0;
         }
         
+        /* Grille agents - 3 colonnes */
+        .agents-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+        }
+        
+        @media (max-width: 1024px) {
+            .agents-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Cartes agents */
         .agent-card {
             background: white;
             border: 1px solid var(--color-border);
@@ -77,14 +105,14 @@
         }
         
         .agent-title-group h3 {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 600;
             margin-bottom: 0.25rem;
             color: var(--color-text);
         }
         
         .agent-tagline {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-style: italic;
             color: var(--color-secondary);
             margin-bottom: 0;
@@ -94,6 +122,7 @@
             color: var(--color-text-light);
             margin-bottom: var(--spacing-sm);
             line-height: 1.6;
+            font-size: 0.95rem;
         }
         
         .agent-features {
@@ -106,7 +135,8 @@
             position: relative;
             margin-bottom: 0.5rem;
             color: var(--color-text-light);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
         }
         
         .agent-features li::before {
@@ -117,15 +147,15 @@
             font-weight: bold;
         }
         
+        /* Transition CTA - même fond */
         .transition-cta {
-            background: var(--color-bg-alt);
             padding: var(--spacing-lg) 0;
             text-align: center;
-            margin: var(--spacing-lg) 0;
         }
         
         .transition-cta p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
+            font-weight: 500;
             color: var(--color-text);
             margin-bottom: var(--spacing-md);
             max-width: 800px;
@@ -139,6 +169,85 @@
             justify-content: center;
             flex-wrap: wrap;
         }
+        
+        .transition-buttons .btn {
+            min-width: 250px;
+        }
+        
+        /* Section sur-mesure développée */
+        .custom-intro {
+            max-width: 800px;
+            margin: 0 auto var(--spacing-lg);
+        }
+        
+        .custom-intro h2 {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            margin-bottom: var(--spacing-md);
+            text-align: center;
+        }
+        
+        .custom-intro-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-sm);
+            text-align: center;
+        }
+        
+        .custom-process {
+            max-width: 900px;
+            margin: var(--spacing-lg) auto;
+        }
+        
+        .custom-process h3 {
+            text-align: center;
+            margin-bottom: var(--spacing-md);
+            font-size: 1.4rem;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        @media (max-width: 768px) {
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .process-step {
+            text-align: center;
+            padding: var(--spacing-md);
+        }
+        
+        .process-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto var(--spacing-sm);
+        }
+        
+        .process-step h4 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-xs);
+            color: var(--color-text);
+        }
+        
+        .process-step p {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            line-height: 1.5;
+        }
     </style>
 </head>
 <body>
@@ -146,7 +255,7 @@
     <!-- NAVIGATION -->
     <nav class="nav">
         <div class="container nav-container">
-            <img src="OR-AI-AGENTS-FINAL-DARK.svg" alt="OR AI Agents" class="logo">
+            <img src="OR-AI-LOGO-HEADER.svg" alt="OR AI Agents" class="logo">
             <button class="nav-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
@@ -163,8 +272,8 @@
     <!-- HERO -->
     <section class="hero">
         <div class="container hero-content">
-            <h1 class="hero-title">Des agents IA qui travaillent 24/7 pour votre entreprise</h1>
-            <p class="hero-subtitle">Répondez aux appels, qualifiez vos prospects, gérez vos demandes clients — 24/7.<br>
+            <h1 class="hero-title">Des Agents IA qui travaillent 24/7<br>pour votre entreprise</h1>
+            <p class="hero-subtitle">Automatisez la qualification de leads, le support client et la gestion administrative.<br>
             Concentrez-vous sur l'essentiel, l'IA gère le reste.</p>
             <div class="hero-cta">
                 <a href="#agents" class="btn btn-primary">Voir le catalogue</a>
@@ -177,17 +286,17 @@
     <section id="agents" class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Découvrez nos agents IA</h2>
+                <h2 class="section-title">Découvrez nos Agents IA</h2>
                 <p class="section-subtitle">Des agents IA prêts à l'emploi pour automatiser les tâches clés de votre activité. Utilisables seuls ou combinés, selon vos besoins.</p>
             </div>
 
             <!-- CATÉGORIE : ACQUISITION -->
-            <div class="category-section">
-                <div class="category-header">
+            <div class="category-wrapper">
+                <div class="category-title">
                     <h3>Acquisition</h3>
                 </div>
 
-                <div class="cards-grid">
+                <div class="agents-grid">
                     <!-- Agent 1 : Gabriel -->
                     <div class="card agent-card">
                         <div class="agent-header">
@@ -264,12 +373,12 @@
             </div>
 
             <!-- CATÉGORIE : CONVERSION -->
-            <div class="category-section">
-                <div class="category-header">
+            <div class="category-wrapper">
+                <div class="category-title">
                     <h3>Conversion</h3>
                 </div>
 
-                <div class="cards-grid">
+                <div class="agents-grid">
                     <!-- Agent 4 : Léa -->
                     <div class="card agent-card">
                         <div class="agent-header">
@@ -346,12 +455,12 @@
             </div>
 
             <!-- CATÉGORIE : FIDÉLISATION -->
-            <div class="category-section">
-                <div class="category-header">
+            <div class="category-wrapper">
+                <div class="category-title">
                     <h3>Fidélisation</h3>
                 </div>
 
-                <div class="cards-grid">
+                <div class="agents-grid">
                     <!-- Agent 7 : Nina -->
                     <div class="card agent-card">
                         <div class="agent-header">
@@ -438,10 +547,34 @@
     <!-- SECTION SUR-MESURE -->
     <section class="section section-alt">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Votre besoin ne rentre pas parfaitement dans le catalogue ?<br>Nous concevons vos agents sur-mesure.</h2>
-                <p class="section-subtitle">Quelques exemples d'adaptations réalisées :</p>
+            <div class="custom-intro">
+                <h2>Une solution adaptée à chaque entreprise</h2>
+                <p class="custom-intro-text">Chaque entreprise a ses propres enjeux, ses propres processus, ses propres priorités. C'est pourquoi nous ne proposons pas de solutions standardisées, mais des agents IA conçus sur-mesure pour s'intégrer parfaitement à votre activité.</p>
+                <p class="custom-intro-text">Votre besoin ne correspond pas exactement au catalogue ? Nous adaptons nos agents à votre contexte métier spécifique.</p>
             </div>
+
+            <div class="custom-process">
+                <h3>Notre démarche</h3>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="process-number">1</div>
+                        <h4>Audit approfondi</h4>
+                        <p>Analyse de vos besoins, de vos processus actuels et identification des opportunités d'automatisation.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-number">2</div>
+                        <h4>Conception sur-mesure</h4>
+                        <p>Développement d'agents IA adaptés à vos critères, vos outils et vos workflows spécifiques.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-number">3</div>
+                        <h4>Déploiement accompagné</h4>
+                        <p>Formation de vos équipes, intégration progressive et ajustements selon les retours terrain.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin-bottom: var(--spacing-md); font-size: 1.5rem;">Exemples d'adaptations réalisées</h3>
 
             <div class="use-cases">
                 <div class="card">
@@ -471,10 +604,10 @@
                 </div>
             </div>
 
-            <p class="section-disclaimer">Ces exemples illustrent nos adaptations métiers.<br>Votre besoin est différent ? Parlons-en.</p>
+            <p class="section-disclaimer">Ces exemples illustrent notre approche. Votre besoin est différent ? Parlons-en.</p>
 
             <div class="cta-button-wrapper">
-                <a href="#contact" class="btn btn-primary">Obtenir une solution adaptée</a>
+                <a href="#contact" class="btn btn-primary btn-large">Obtenir une solution adaptée</a>
             </div>
         </div>
     </section>

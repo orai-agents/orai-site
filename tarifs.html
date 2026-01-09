@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tarifs OR AI Agents - Packs d'agents IA à partir de 490€ de setup + 99€/mois. Solutions adaptées à vos besoins.">
+    <meta name="description" content="Tarifs OR AI Agents - Packs d'agents IA à partir de 490€ + 99€/mois. Solutions adaptées à vos besoins.">
     <title>Tarifs - OR AI Agents</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Styles spécifiques page tarifs */
+        /* Hero tarifs */
         .pricing-hero {
             padding: var(--spacing-lg) 0 var(--spacing-md);
             text-align: center;
@@ -15,27 +15,33 @@
         
         .pricing-hero h1 {
             margin-bottom: var(--spacing-sm);
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
         }
         
         .pricing-hero p {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--color-text-light);
             max-width: 700px;
             margin: 0 auto;
         }
         
+        /* Grille tarifs - 3 colonnes */
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: var(--spacing-md);
             margin: var(--spacing-lg) 0;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
+        /* Cartes pricing - plus compactes */
         .pricing-card {
             background: white;
             border: 2px solid var(--color-border);
             border-radius: var(--border-radius);
-            padding: var(--spacing-lg);
+            padding: var(--spacing-md);
             transition: var(--transition);
             display: flex;
             flex-direction: column;
@@ -48,44 +54,34 @@
         }
         
         .pricing-name {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 600;
             color: var(--color-text);
-            margin-bottom: var(--spacing-md);
+            margin-bottom: var(--spacing-sm);
             text-align: center;
         }
         
-        .pricing-amounts {
+        /* Prix sur une ligne */
+        .pricing-amount {
             text-align: center;
             margin-bottom: var(--spacing-md);
             padding-bottom: var(--spacing-md);
             border-bottom: 2px solid var(--color-bg-alt);
         }
         
-        .pricing-setup {
-            font-size: 1.75rem;
+        .pricing-price {
+            font-size: 1.4rem;
             font-weight: 700;
             color: var(--color-secondary);
-            margin-bottom: 0.25rem;
         }
         
-        .pricing-setup-label {
-            font-size: 0.9rem;
+        .pricing-period {
+            font-size: 0.95rem;
             color: var(--color-text-light);
-            margin-bottom: var(--spacing-sm);
+            margin-top: 0.25rem;
         }
         
-        .pricing-monthly {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--color-text);
-        }
-        
-        .pricing-monthly-label {
-            font-size: 0.9rem;
-            color: var(--color-text-light);
-        }
-        
+        /* Features */
         .pricing-features {
             list-style: none;
             padding: 0;
@@ -94,12 +90,13 @@
         }
         
         .pricing-features li {
-            padding: 0.75rem 0;
-            padding-left: 1.75rem;
+            padding: 0.6rem 0;
+            padding-left: 1.5rem;
             position: relative;
             color: var(--color-text);
             border-bottom: 1px solid var(--color-bg-alt);
-            line-height: 1.5;
+            line-height: 1.4;
+            font-size: 0.95rem;
         }
         
         .pricing-features li:last-child {
@@ -112,7 +109,7 @@
             left: 0;
             color: var(--color-secondary);
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
         
         .pricing-cta {
@@ -129,18 +126,19 @@
             color: var(--color-text-light);
             font-size: 0.9rem;
             font-style: italic;
-            margin: var(--spacing-md) 0;
+            margin: var(--spacing-md) 0 var(--spacing-lg);
         }
         
+        /* Section sur-mesure */
         .custom-pricing {
             background: var(--color-bg-alt);
             padding: var(--spacing-lg) 0;
-            margin-top: var(--spacing-lg);
         }
         
         .custom-pricing h2 {
             text-align: center;
             margin-bottom: var(--spacing-sm);
+            font-size: clamp(1.5rem, 3vw, 2rem);
         }
         
         .custom-pricing-content {
@@ -152,6 +150,8 @@
         .custom-pricing-content p {
             color: var(--color-text-light);
             margin-bottom: var(--spacing-sm);
+            font-size: 1rem;
+            line-height: 1.6;
         }
         
         .custom-pricing-details {
@@ -164,9 +164,7 @@
         @media (max-width: 1024px) {
             .pricing-grid {
                 grid-template-columns: 1fr;
-                max-width: 500px;
-                margin-left: auto;
-                margin-right: auto;
+                max-width: 450px;
             }
         }
     </style>
@@ -176,7 +174,7 @@
     <!-- NAVIGATION -->
     <nav class="nav">
         <div class="container nav-container">
-            <img src="OR-AI-AGENTS-FINAL-DARK.svg" alt="OR AI Agents" class="logo">
+            <img src="OR-AI-LOGO-HEADER.svg" alt="OR AI Agents" class="logo">
             <button class="nav-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
@@ -207,11 +205,9 @@
                 <!-- PACK STARTER -->
                 <div class="pricing-card">
                     <h3 class="pricing-name">Pack Starter</h3>
-                    <div class="pricing-amounts">
-                        <div class="pricing-setup">490 €</div>
-                        <div class="pricing-setup-label">Setup</div>
-                        <div class="pricing-monthly">99 € / mois</div>
-                        <div class="pricing-monthly-label">Abonnement</div>
+                    <div class="pricing-amount">
+                        <div class="pricing-price">490€ + 99€/mois</div>
+                        <div class="pricing-period">Setup + Abonnement</div>
                     </div>
                     <ul class="pricing-features">
                         <li>2 agents</li>
@@ -220,18 +216,16 @@
                         <li>Fonctionnement défini au lancement</li>
                     </ul>
                     <div class="pricing-cta">
-                        <a href="index.html#contact" class="btn btn-primary">Démarrer</a>
+                        <a href="index.html#contact" class="btn btn-primary">Choisir ce pack</a>
                     </div>
                 </div>
 
                 <!-- PACK BUSINESS -->
                 <div class="pricing-card">
                     <h3 class="pricing-name">Pack Business</h3>
-                    <div class="pricing-amounts">
-                        <div class="pricing-setup">1 190 €</div>
-                        <div class="pricing-setup-label">Setup</div>
-                        <div class="pricing-monthly">239 € / mois</div>
-                        <div class="pricing-monthly-label">Abonnement</div>
+                    <div class="pricing-amount">
+                        <div class="pricing-price">1 190€ + 239€/mois</div>
+                        <div class="pricing-period">Setup + Abonnement</div>
                     </div>
                     <ul class="pricing-features">
                         <li>5 agents</li>
@@ -240,18 +234,16 @@
                         <li>Ajustements au démarrage inclus</li>
                     </ul>
                     <div class="pricing-cta">
-                        <a href="index.html#contact" class="btn btn-primary">Démarrer</a>
+                        <a href="index.html#contact" class="btn btn-primary">Choisir ce pack</a>
                     </div>
                 </div>
 
                 <!-- PACK AUTOMATION -->
                 <div class="pricing-card">
                     <h3 class="pricing-name">Pack Automation</h3>
-                    <div class="pricing-amounts">
-                        <div class="pricing-setup">2 190 €</div>
-                        <div class="pricing-setup-label">Setup</div>
-                        <div class="pricing-monthly">399 € / mois</div>
-                        <div class="pricing-monthly-label">Abonnement</div>
+                    <div class="pricing-amount">
+                        <div class="pricing-price">2 190€ + 399€/mois</div>
+                        <div class="pricing-period">Setup + Abonnement</div>
                     </div>
                     <ul class="pricing-features">
                         <li>9 agents</li>
@@ -261,7 +253,7 @@
                         <li>Adaptation du fonctionnement existant</li>
                     </ul>
                     <div class="pricing-cta">
-                        <a href="index.html#contact" class="btn btn-primary">Démarrer</a>
+                        <a href="index.html#contact" class="btn btn-primary">Choisir ce pack</a>
                     </div>
                 </div>
 
