@@ -5,8 +5,8 @@
 :root {
     /* Colors - Palette Or & Noir (alignée sur le logo) */
     --color-primary: #0A0A0A;        /* Noir profond */
-    --color-secondary: #D4AF37;      /* Or */
-    --color-accent: #C9A961;         /* Or clair */
+    --color-secondary: #D4A528;      /* Or */
+    --color-accent: #E5B737;         /* Or clair */
     --color-text: #2D2D2D;           /* Gris foncé (moins noir) */
     --color-text-light: #666666;     /* Gris moyen */
     --color-bg: #FFFFFF;             /* Blanc pur */
