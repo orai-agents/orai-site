@@ -30,8 +30,22 @@ nano index.html<!DOCTYPE html>
         
         /* Hero avec fond beige */
         .hero {
-            background: white;
+            background: var(--color-bg-alt);
             position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(135deg, transparent 48%, rgba(212, 175, 55, 0.02) 49%, rgba(212, 175, 55, 0.02) 51%, transparent 52%);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
         }
         
         .hero-content {
@@ -415,13 +429,13 @@ nano index.html<!DOCTYPE html>
             Votre premier collaborateur IA, adapté à votre métier.</p>
             <div class="hero-cta">
                 <a href="#agents" class="btn btn-primary">Découvrir nos agents</a>
-                <a href="#contact" class="btn btn-secondary">Parlons de votre besoin</a>
+                <a href="#contact" class="btn btn-secondary">Parler de votre besoin</a>
             </div>
         </div>
     </section>
 
     <!-- CATALOGUE AGENTS -->
-    <section id="agents" class="section section-alt">
+    <section id="agents" class="section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Découvrez nos Agents IA</h2>
@@ -683,7 +697,7 @@ nano index.html<!DOCTYPE html>
     </div>
 
     <!-- SECTION SUR-MESURE -->
-    <section id="sur-mesure" class="section">
+    <section id="sur-mesure" class="section section-alt">
         <div class="container">
             <div class="custom-intro">
                 <h2>Des agents sur-mesure,<br>adaptés à votre fonctionnement</h2>
@@ -770,7 +784,7 @@ nano index.html<!DOCTYPE html>
             </div>
 
             <div class="cta-button-wrapper" style="margin-top: var(--spacing-lg);">
-                <a href="#contact" class="btn btn-primary btn-large">Parlons de votre besoin</a>
+                <a href="#contact" class="btn btn-primary btn-large">Parler de votre besoin</a>
             </div>
         </div>
     </section>
