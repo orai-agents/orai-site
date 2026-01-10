@@ -6,12 +6,12 @@
     /* Colors - Palette Or & Noir (alignée sur le logo) */
     --color-primary: #1A1A1A;        /* Noir profond */
     --color-secondary: #D4B24C;      /* Or */
-    --color-accent: #E5B737;         /* Or clair */
-    --color-text: #2D2D2D;           /* Gris foncé (moins noir) */
-    --color-text-light: #666666;     /* Gris moyen */
+    --color-accent: #D4B24C;         /* Or clair */
+    --color-text: #1A1A1A;           /* Gris foncé (moins noir) */
+    --color-text-light: #555555;     /* Gris moyen */
     --color-bg: #FFFFFF;             /* Blanc pur */
-    --color-bg-alt: #FAF8F5;         /* Beige très clair */
-    --color-border: #E0E0E0;         /* Gris bordure */
+    --color-bg-alt: #FAF8F3;         /* Beige très clair */
+    --color-border: #E5E5E5;         /* Gris bordure */
     
     /* Typography */
     --font-body: 'Work Sans', -apple-system, system-ui, sans-serif;
@@ -950,4 +950,38 @@ a:hover {
         display: block;
         margin: 8px 0;
     }
+}
+/* Nouvelle charte - Boutons */
+.btn-primary {
+    background: #D4B24C !important;
+    color: #FFFFFF !important;
+    border: 2px solid #D4B24C !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12) !important;
+}
+
+.btn-primary:hover {
+    background: #C9A841 !important;
+    border-color: #C9A841 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16) !important;
+}
+
+.btn-secondary {
+    background: transparent !important;
+    color: #D4B24C !important;
+    border: 2px solid #D4B24C !important;
+}
+
+.btn-secondary:hover {
+    background: rgba(212, 178, 76, 0.08) !important;
+    color: #D4B24C !important;
+    border-color: #D4B24C !important;
+}
+
+/* Textes */
+h1, h2, h3, h4, h5, h6 {
+    color: #1A1A1A !important;
+}
+
+body, p, li {
+    color: #555555;
 }
