@@ -646,16 +646,17 @@ a:hover {
 
 .footer {
     background: white;
-    color: var(--color-text);
-    padding: var(--spacing-sm) 0 var(--spacing-xs);
     border-top: 2px solid var(--color-secondary);
+    padding: 20px 0 12px !important;
 }
 
-.footer-content {
+.footer-content-new {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+    padding: 16px 0 !important;
+    border-bottom: 1px solid #e5e5e5;
+    align-items: start;
 }
 
 .footer-logo {
@@ -697,9 +698,8 @@ a:hover {
 
 .footer-bottom {
     text-align: center;
-    padding-top: var(--spacing-md);
-    border-top: 1px solid var(--color-border);
-    color: var(--color-text-light);
+    padding: 10px 0 0 !important;
+    color: #6B7280;
     font-size: 0.9rem;
 }
 
