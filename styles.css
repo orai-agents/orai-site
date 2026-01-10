@@ -647,7 +647,7 @@ a:hover {
 .footer {
     background: white;
     color: var(--color-text);
-    padding: var(--spacing-lg) 0 var(--spacing-md);
+    padding: var(--spacing-sm) 0 var(--spacing-xs);
     border-top: 2px solid var(--color-secondary);
 }
 
@@ -878,7 +878,7 @@ a:hover {
 .footer-content-new {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
+    gap: 60px;
     padding: 20px 0;
     border-bottom: 1px solid #e5e5e5;
     align-items: start;
@@ -1038,7 +1038,7 @@ body, p, li {
 
 .footer-bottom-new {
     text-align: center;
-    padding: 20px 0 0;
+    padding: 12px 0 0;
     color: #6B7280;
     font-size: 0.9rem;
 }
