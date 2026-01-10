@@ -165,7 +165,17 @@
             width: 100%;
             text-align: center;
         }
+        /* Boutons outline pour tous les packs sauf Business */
+        .pricing-card:not(.pack-business) .btn {
+            background: transparent !important;
+            color: #D4B24C !important;
+            border: 2px solid #D4B24C !important;
+        }
         
+        .pricing-card:not(.pack-business) .btn:hover {
+            background: rgba(212, 178, 76, 0.08) !important;
+        }
+
         .legal-notice {
             text-align: center;
             color: var(--color-text-light);
@@ -305,7 +315,7 @@
 
 /* Pack Business - Fond doré */
         .pricing-card.pack-business {
-            background: #FFF9E6;
+            background: #FFFBF0;
             border-color: #D4B24C;
         }
         
