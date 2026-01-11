@@ -305,7 +305,7 @@
             line-height: 1.7;
             color: var(--color-text-light);
             margin-bottom: var(--spacing-sm);
-            text-align: left;
+            text-align: center;
         }
         
         /* Footer élégant - Logo gauche + rubriques droite */
