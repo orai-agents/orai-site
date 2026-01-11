@@ -416,13 +416,21 @@
 /* Mobile - augmenter police sous-titres */
         @media (max-width: 768px) {
             .hero-subtitle {
-                font-size: 1.05rem !important;
+                font-size: 1rem !important;
             }
             
             .section-subtitle {
                 font-size: 1rem !important;
             }
         }
+
+/* Mobile - réduire titres sur-mesure */
+        @media (max-width: 768px) {
+            #sur-mesure h3 {
+                font-size: 1.1rem !important;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -728,7 +736,7 @@
         <div class="container">
             <div class="custom-intro">
                 <h2>Des Agents sur-mesure,<br>adaptés à votre fonctionnement</h2>
-                <p class="custom-intro-text">Les agents existants ne correspondent pas exactement à vos besoins ? Nous concevons également des solutions sur-mesure, adaptées à votre contexte et vos processus spécifiques.<br></p>
+                <p class="custom-intro-text">Les agents existants ne correspondent pas exactement à vos besoins ?<br class="mobile-break"> Nous concevons également des solutions sur-mesure, adaptées à votre contexte et vos processus spécifiques.<br></p>
             </div>
 
             <h3 style="text-align: center; margin-top: 40px; margin-bottom: var(--spacing-md); font-size: 1.5rem;">Exemples d'adaptations réalisées</h3>
@@ -766,7 +774,7 @@
             <!-- SECTION Comment se déroule un projet sur-mesure (placée ici et remontée) -->
             <div style="margin-top: 40px;">
                 <div class="section-header">
-                    <h2 class="section-title">Comment se déroule un projet sur-mesure</h2>
+                    <h2 class="section-title" style="font-size: 1.5rem;">Comment se déroule un projet sur-mesure</h2>
                 </div>
 
                 <div class="process-steps">
