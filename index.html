@@ -396,6 +396,24 @@
                 justify-content: center;
             }
         }
+
+/* Section CTA - texte blanc + padding réduit */
+        .section-cta {
+            padding: var(--spacing-md) 0 !important;
+        }
+        
+        .section-cta h2,
+        .section-cta p {
+            color: white !important;
+        }
+
+/* Mobile - réduire texte transition */
+        @media (max-width: 768px) {
+            .transition-cta p {
+                font-size: 1rem !important;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -800,8 +818,6 @@
         </div>
     </section>
 
-    <!-- FOOTER - Logo gauche + Rubriques droite -->
-    <footer class="footer">
 <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
