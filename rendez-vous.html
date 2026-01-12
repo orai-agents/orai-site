@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Réservez un échange gratuit de 30 minutes pour discuter de votre projet d'assistant IA sur-mesure.">
+    <title>Parlons de votre projet - OR AI Agents</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Override couleur titres */
+        h1, h2, h3, h4, h5, h6 {
+            color: #2D2D2D;
+        }
+        
+        /* Logo cliquable */
+        .logo {
+            cursor: pointer;
+        }
+        
+        /* Menu - Planifier un échange en doré */
+        .nav-cta {
+            color: var(--color-secondary) !important;
+            border-color: var(--color-secondary) !important;
+        }
+        
+        .nav-cta:hover {
+            background: var(--color-secondary) !important;
+            color: var(--color-primary) !important;
+        }
+        
+        /* Page rendez-vous styles */
+        .rdv-hero {
+            background: var(--color-bg-alt);
+            padding: var(--spacing-xl) 0 var(--spacing-lg);
+            text-align: center;
+        }
+        
+        .rdv-hero h1 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: var(--spacing-sm);
+            color: #2D2D2D;
+        }
+        
+        .rdv-hero .subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--color-text-light);
+            max-width: 700px;
+            margin: 0 auto var(--spacing-lg);
+            line-height: 1.6;
+        }
+        
+        /* Calendly container */
+        .calendly-section {
+            padding: var(--spacing-lg) 0;
+            background: white;
+        }
+        
+        .calendly-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            min-height: 700px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: var(--spacing-md);
+        }
+        
+        /* Placeholder Calendly */
+        .calendly-placeholder {
+            text-align: center;
+            padding: var(--spacing-xl);
+        }
+        
+        .calendly-placeholder h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-md);
+            color: #2D2D2D;
+        }
+        
+        .calendly-placeholder p {
+            font-size: 1.1rem;
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .contact-details {
+            margin-top: var(--spacing-lg);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+            align-items: center;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            font-size: 1.1rem;
+        }
+        
+        .contact-item a {
+            color: var(--color-secondary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-item a:hover {
+            color: var(--color-accent);
+        }
+        
+        @media (max-width: 768px) {
+            .calendly-container {
+                min-height: 600px;
+                padding: var(--spacing-sm);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="index.html">
+                <img src="OR-AI-LOGO-HEADER.svg" alt="OR AI Agents" class="logo">
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#agents">Nos Agents</a></li>
+                <li><a href="index.html#sur-mesure">Solution personnalisée</a></li>
+                <li><a href="tarifs.html">Offres</a></li>
+                <li><a href="rendez-vous.html" class="nav-cta">Planifier un échange</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="rdv-hero">
+        <div class="container">
+            <h1>Parlons de votre projet</h1>
+            <p class="subtitle">Un échange gratuit de 30 minutes pour comprendre vos enjeux et voir comment un assistant IA peut s'intégrer concrètement à votre activité.</p>
+        </div>
+    </section>
+
+    <!-- CALENDLY SECTION -->
+    <section class="calendly-section">
+        <div class="container">
+            <div class="calendly-container">
+                <!-- 
+                    TODO: REMPLACER CE PLACEHOLDER PAR LE CODE CALENDLY
+                    
+                    Quand Calendly fonctionne, remplace tout le bloc "calendly-placeholder" par :
+                    
+                    <div class="calendly-inline-widget" 
+                         data-url="TON_LIEN_CALENDLY_ICI"
+                         style="min-width:320px;height:700px;">
+                    </div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                -->
+                
+                <div class="calendly-placeholder">
+                    <h3>Réservation bientôt disponible</h3>
+                    <p>En attendant, vous pouvez me contacter directement :</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span>📧</span>
+                            <a href="mailto:oraiagents@gmail.com">oraiagents@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span>📱</span>
+                            <a href="tel:+33661267519">06 61 26 75 19</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content-new">
+                <div class="footer-col footer-logo-col">
+                    <img src="OR-AI-LOGO-HEADER.svg" alt="OR AI Agents" class="footer-logo">
+                    <p class="footer-tagline">Assistants IA sur-mesure</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:oraiagents@gmail.com">oraiagents@gmail.com</a></p>
+                    <p>06 61 26 75 19</p>
+                    <p>Cannes, Côte d'Azur</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Liens</h4>
+                    <p><a href="mentions-legales.html">Mentions légales</a></p>
+                    <p><a href="politique-confidentialite.html">Politique de confidentialité</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 OR AI Agents - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
