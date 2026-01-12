@@ -443,6 +443,22 @@
     }
 }
 
+/* Afficher/masquer selon device */
+        .hero-title-mobile {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title-desktop {
+                display: none;
+            }
+            
+            .hero-title-mobile {
+                display: block;
+                font-size: 1.65rem !important;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -471,7 +487,8 @@
     <!-- HERO -->
     <section class="hero">
         <div class="container hero-content">
-            <h1 class="hero-title">Des Agents IA qui travaillent 24/7<br>pour votre entreprise.</h1>
+<h1 class="hero-title hero-title-desktop">Des Agents IA qui travaillent 24/7<br>pour votre entreprise.</h1>
+<h1 class="hero-title hero-title-mobile">Des Agents IA qui travaillent 24/7 pour votre entreprise.</h1>
             <p class="hero-subtitle">Répondre aux appels, qualifier vos prospects, gérer vos demandes clients  — et bien plus encore.<br>
             Votre premier collaborateur IA, adapté à votre métier.</p>
             <div class="hero-cta">
