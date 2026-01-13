@@ -157,7 +157,16 @@ height: 1000px !important; /* Mobile plus grand */
         <!-- Calendly inline widget begin -->
 <div style="border-radius: 16px; overflow: hidden;">        
 <div class="calendly-inline-widget" data-url="https://calendly.com/orai-agents/echange-decouverte" style="min-width:320px;height:800px;"></div>        
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" defer></script>
+
+<script>
+// Force le rechargement si pas chargé après 3 secondes
+setTimeout(function() {
+    if (!window.Calendly) {
+        location.reload();
+    }
+}, 3000);
+</script>
         <!-- Calendly inline widget end -->            
         </div>
     </section>
