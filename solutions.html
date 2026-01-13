@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agents IA sur-mesure pour PME, hôtellerie, tourisme et RH. Automatisation de la qualification de leads, réservations et onboarding employés.">
+    <title>Solutions sur-mesure - OR AI Agents</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Override couleur titres */
+        h1, h2, h3, h4, h5, h6 {
+            color: #2D2D2D;
+        }
+        
+        /* Logo cliquable */
+        .logo {
+            cursor: pointer;
+        }
+        
+        /* Menu - Planifier un échange en doré */
+        .nav-cta {
+            color: var(--color-secondary) !important;
+            border-color: var(--color-secondary) !important;
+        }
+        
+        .nav-cta:hover {
+            background: var(--color-secondary) !important;
+            color: var(--color-primary) !important;
+        }
+        
+        /* Hero */
+        .hero-solutions {
+            background: var(--color-bg-alt);
+            padding: var(--spacing-xl) 0 var(--spacing-lg);
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-solutions::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(135deg, transparent 48%, rgba(212, 175, 55, 0.02) 49%, rgba(212, 175, 55, 0.02) 51%, transparent 52%);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .hero-solutions-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-solutions h1 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .hero-solutions .subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--color-text-light);
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        /* Sections sectorielles */
+        .sector-section {
+            padding: var(--spacing-xl) 0;
+        }
+        
+        .sector-section:nth-child(even) {
+            background: var(--color-bg-alt);
+            position: relative;
+        }
+        
+        .sector-section:nth-child(even)::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(135deg, transparent 48%, rgba(212, 175, 55, 0.02) 49%, rgba(212, 175, 55, 0.02) 51%, transparent 52%);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .sector-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .sector-header h2 {
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .sector-header .subtitle {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--color-text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Use cases cards */
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .use-case-card {
+            background: white;
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            transition: var(--transition);
+        }
+        
+        .use-case-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+            border-color: var(--color-secondary);
+        }
+        
+        .use-case-card h3 {
+            color: var(--color-secondary);
+            margin-bottom: var(--spacing-xs);
+            font-size: 1.3rem;
+        }
+        
+        .use-case-card p {
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .use-case-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .use-case-card li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+        }
+        
+        .use-case-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-secondary);
+            font-weight: 700;
+        }
+        
+        /* Case study Boat&Yacht */
+        .case-study {
+            background: linear-gradient(135deg, rgba(212, 178, 76, 0.08) 0%, rgba(212, 178, 76, 0.03) 100%);
+            border-left: 4px solid var(--color-secondary);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            margin: var(--spacing-lg) 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .case-study h3 {
+            color: var(--color-secondary);
+            margin-bottom: var(--spacing-xs);
+            font-size: 1.2rem;
+        }
+        
+        .case-study p {
+            color: var(--color-text);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .case-study-label {
+            display: inline-block;
+            background: var(--color-secondary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        /* Process steps */
+        .process-section {
+            margin: var(--spacing-xl) 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .process-step {
+            background: white;
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--color-border);
+        }
+        
+        .process-number {
+            width: 40px;
+            height: 40px;
+            background: var(--color-secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .process-step h3 {
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .process-step p {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        .process-note {
+            background: rgba(212, 178, 76, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            margin-top: var(--spacing-sm);
+            font-size: 0.9rem;
+            color: var(--color-text);
+            font-style: italic;
+        }
+        
+        /* Boutons */
+        .btn-primary {
+            background: var(--color-secondary);
+            color: white;
+            border: 2px solid var(--color-secondary);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .btn-primary:hover {
+            background: var(--color-accent);
+            border-color: var(--color-accent);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .cta-wrapper {
+            text-align: center;
+            margin: var(--spacing-xl) 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* CTA section finale */
+        .section-cta-final {
+            background: linear-gradient(135deg, #2D2D2D 0%, #1A1A1A 100%);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+        
+        .section-cta-final h2 {
+            color: white;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .section-cta-final p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .use-cases-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-solutions h1 {
+                font-size: 1.8rem;
+            }
+            
+            .sector-header h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="index.html">
+                <img src="OR-AI-LOGO-HEADER.svg" alt="OR AI Agents" class="logo">
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html#agents">Nos agents IA</a></li>
+                <li><a href="solutions.html">Approche sur-mesure</a></li>
+                <li><a href="tarifs.html">Offres</a></li>
+                <li><a href="rendez-vous.html" class="nav-cta">Planifier un échange</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-solutions">
+        <div class="container hero-solutions-content">
+            <h1>Agents IA sur-mesure pour votre activité</h1>
+            <p class="subtitle">Nous développons des agents IA adaptés à vos processus et vos enjeux métier, spécialement conçus pour les entreprises de services, l'hôtellerie, le tourisme et les ressources humaines.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 1 : PME SERVICES -->
+    <section class="sector-section">
+        <div class="container">
+            <div class="sector-header">
+                <h2>Agent IA pour entreprises de services</h2>
+                <p class="subtitle">Automatisation de la qualification de leads et de la prise de rendez-vous pour agences immobilières, cabinets de conseil, centres de formation et services B2B</p>
+            </div>
+            
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <h3>Agences immobilières</h3>
+                    <p>Qualifiez automatiquement les demandes d'achat, location ou estimation et orientez vos prospects vers le bon interlocuteur.</p>
+                    <ul>
+                        <li>Qualification type de bien et budget en temps réel</li>
+                        <li>Orientation automatique selon critères</li>
+                        <li>Prise de rendez-vous avec agents disponibles</li>
+                        <li>Rappels automatiques pour réduire les absences</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <h3>Cabinets de conseil</h3>
+                    <p>Filtrez les demandes entrantes et concentrez-vous uniquement sur les prospects qualifiés à forte valeur.</p>
+                    <ul>
+                        <li>Scoring automatique des opportunités</li>
+                        <li>Collecte des informations clés avant le 1er contact</li>
+                        <li>Planification intelligente des consultations</li>
+                        <li>Suivi personnalisé selon le stade du prospect</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <h3>Centres de formation</h3>
+                    <p>Gérez efficacement les inscriptions et accompagnez vos prospects du premier contact jusqu'à la formation.</p>
+                    <ul>
+                        <li>Qualification besoins et niveau des candidats</li>
+                        <li>Présentation automatique des programmes adaptés</li>
+                        <li>Gestion des dossiers d'inscription</li>
+                        <li>Rappels et suivi du parcours</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <h3>Services B2B</h3>
+                    <p>Automatisez vos prises de contact et votre qualification commerciale pour augmenter votre taux de conversion.</p>
+                    <ul>
+                        <li>Réception et qualification des demandes 24/7</li>
+                        <li>Collecte des informations métier critiques</li>
+                        <li>Envoi automatique de devis ou documentation</li>
+                        <li>Transfert des leads qualifiés à votre équipe</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2 : HÔTELLERIE / TOURISME -->
+    <section class="sector-section">
+        <div class="container">
+            <div class="sector-header">
+                <h2>Agent IA pour l'hôtellerie et le tourisme</h2>
+                <p class="subtitle">Automatisation des réservations et qualification des demandes pour hôtels, locations saisonnières, conciergeries et activités touristiques</p>
+            </div>
+            
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <h3>Hôtels & hébergements</h3>
+                    <p>Répondez aux demandes de réservation 24/7 avec un assistant vocal intelligent qui qualifie et guide vos clients.</p>
+                    <ul>
+                        <li>Réception d'appels automatisée jour et nuit</li>
+                        <li>Collecte dates, nombre de personnes, préférences</li>
+                        <li>Vérification disponibilités en temps réel</li>
+                        <li>Prise de réservation ou transfert si nécessaire</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <h3>Locations saisonnières</h3>
+                    <p>Gérez vos demandes de location sans perdre de temps sur les demandes non qualifiées ou hors budget.</p>
+                    <ul>
+                        <li>Qualification dates et capacité d'accueil</li>
+                        <li>Vérification budget et attentes des clients</li>
+                        <li>Envoi automatique des disponibilités</li>
+                        <li>Suivi et relance des demandes en cours</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <h3>Conciergeries & services</h3>
+                    <p>Automatisez les demandes répétitives et concentrez votre équipe sur la création d'expériences exceptionnelles.</p>
+                    <ul>
+                        <li>Réponses aux questions fréquentes</li>
+                        <li>Organisation de prestations (transport, restaurant, activités)</li>
+                        <li>Collecte des préférences clients</li>
+                        <li>Coordination avec prestataires partenaires</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <h3>Activités & excursions</h3>
+                    <p>Qualifiez les demandes et gérez les réservations pour vos activités touristiques en toute autonomie.</p>
+                    <ul>
+                        <li>Présentation des activités disponibles</li>
+                        <li>Vérification permis et prérequis si nécessaire</li>
+                        <li>Gestion des créneaux et disponibilités</li>
+                        <li>Confirmation et rappels automatiques</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- CASE STUDY BOAT & YACHT -->
+            <div class="case-study">
+                <span class="case-study-label">Démo fonctionnelle</span>
+                <h3>Boat & Yacht Agency - Location de bateaux sur la Côte d'Azur</h3>
+                <p><strong>Problématique :</strong> Pic de demandes en haute saison avec des clients qui appellent 24/7. Beaucoup de demandes non qualifiées (pas de permis, budget insuffisant, dates non disponibles).</p>
+                <p><strong>Solution développée :</strong> Assistant vocal intelligent en démonstration qui répond aux appels, qualifie les demandes (nombre de personnes, dates, permis bateau, budget, port de départ) et collecte les coordonnées des prospects qualifiés.</p>
+                <p><strong>Potentiel identifié :</strong> Réduction estimée de 70% du temps passé au téléphone grâce à la disponibilité 24/7 et à la qualification automatique des demandes. Version complète avec intégration CRM en attente de déploiement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 : RECRUTEMENT & RH -->
+    <section class="sector-section">
+        <div class="container">
+            <div class="sector-header">
+                <h2>Agent IA pour le recrutement et les RH</h2>
+                <p class="subtitle">Automatisation de la qualification de candidats et de l'onboarding employés pour cabinets RH, PME en croissance et entreprises saisonnières</p>
+            </div>
+            
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <h3>Qualification candidats</h3>
+                    <p>Analysez et scorez automatiquement les candidatures pour ne transmettre à vos équipes que les profils les plus pertinents.</p>
+                    <ul>
+                        <li>Analyse automatique des CV et lettres</li>
+                        <li>Scoring objectif selon vos critères</li>
+                        <li>Classification par niveau d'adéquation</li>
+                        <li>Emails personnalisés selon statut</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <h3>Pré-sélection & entretiens</h3>
+                    <p>Automatisez la première phase de sélection pour gagner un temps précieux sur le screening initial.</p>
+                    <ul>
+                        <li>Questions de qualification automatiques</li>
+                        <li>Collecte d'informations complémentaires</li>
+                        <li>Vérification disponibilités et attentes salariales</li>
+                        <li>Planification entretiens candidats qualifiés</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <h3>Onboarding nouveaux employés</h3>
+                    <p>Accompagnez vos nouveaux collaborateurs dans leur intégration avec un assistant disponible 24/7 pour répondre à leurs questions.</p>
+                    <ul>
+                        <li>Parcours de bienvenue personnalisé et progressif</li>
+                        <li>Collecte documents administratifs</li>
+                        <li>Réponses aux questions pratiques courantes</li>
+                        <li>Ressources et tutoriels envoyés au bon moment</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card">
+                    <h3>Formation & suivi RH</h3>
+                    <p>Structurez l'intégration et la formation de vos collaborateurs avec un suivi automatisé et personnalisé.</p>
+                    <ul>
+                        <li>Parcours de formation par étapes</li>
+                        <li>Suivi progression avec alertes en cas de blocage</li>
+                        <li>Rappels et échéances automatiques</li>
+                        <li>Autonomie accélérée, support RH réduit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PROCESSUS -->
+    <section class="process-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">Comment se déroule un projet sur-mesure</h2>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h3>Rendez-vous découverte</h3>
+                    <p>Un échange gratuit de 30 minutes pour comprendre votre activité, vos enjeux et évaluer la pertinence de l'IA dans votre contexte.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h3>Audit approfondi</h3>
+                    <p>Analyse détaillée de vos processus, proposition d'une solution adaptée et chiffrage précis.</p>
+                    <p class="process-note">L'investissement de l'audit est déduit intégralement si le projet est lancé</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h3>Développement & déploiement</h3>
+                    <p>Conception de votre agent IA sur-mesure, tests réguliers, déploiement sur vos outils et accompagnement à la prise en main.</p>
+                </div>
+            </div>
+            
+            <div class="cta-wrapper">
+                <a href="rendez-vous.html" class="btn-primary">Planifier un échange découverte</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section-cta-final">
+        <div class="container">
+            <h2>Parlons de votre projet</h2>
+            <p>Un audit personnalisé pour identifier comment l'IA peut s'intégrer concrètement dans votre activité</p>
+            <a href="rendez-vous.html" class="btn-primary">Prendre rendez-vous</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content-new">
+                <div class="footer-col footer-logo-col">
+                    <img src="OR-AI-LOGO-HEADER.svg" alt="OR AI Agents" class="footer-logo">
+                    <p class="footer-tagline">Assistants IA sur-mesure</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:oraiagents@gmail.com">oraiagents@gmail.com</a></p>
+                    <p>06 61 26 75 19</p>
+                    <p>Cannes, Côte d'Azur</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Liens</h4>
+                    <p><a href="mentions-legales.html">Mentions légales</a></p>
+                    <p><a href="politique-confidentialite.html">Politique de confidentialité</a></p>
+                    <p><a href="agences-partenaires.html">Agences partenaires</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 OR AI Agents - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
