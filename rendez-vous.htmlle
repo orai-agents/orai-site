@@ -113,16 +113,7 @@
                 min-height: 600px;
                 padding: var(--spacing-sm);
             }
- .page-title {
-            font-size: 1.8rem !important;
         }
-
- .calendly-wrapper {
-        box-shadow: 0 4px 30px rgba(0,0,0,0.15);
-    }
-height: 1000px !important; /* Mobile plus grand */
-        }    
-}
     </style>
 </head>
 <body>
@@ -149,15 +140,14 @@ height: 1000px !important; /* Mobile plus grand */
     </nav>
 
     <!-- CALENDLY SECTION -->
-<section class="calendly-section" style="padding-bottom: 100px; background-color: #F8F7F4;">    
+    <section class="calendly-section">
         <div class="container">
-<h1 class="page-title" style="text-align: center; margin-bottom: 20px;">Parlons de votre projet</h1>
+<h1 style="text-align: center; margin-bottom: 20px;">Parlons de votre projet</h1>
         <p class="subtitle" style="text-align: center; margin-bottom: 40px; color: #666; font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">Un échange gratuit de 30 minutes pour comprendre vos enjeux<br>et voir comment un assistant IA peut s'intégrer concrètement à votre activité.</p>
         
         <!-- Calendly inline widget begin -->
-<div style="border-radius: 16px; overflow: hidden;">        
-<div class="calendly-inline-widget" data-url="https://calendly.com/orai-agents/echange-decouverte" style="min-width:320px;height:800px;"></div>        
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/orai-agents/echange-decouverte" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
         <!-- Calendly inline widget end -->            
         </div>
     </section>
