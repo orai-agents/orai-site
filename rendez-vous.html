@@ -28,34 +28,102 @@
             color: var(--color-primary) !important;
         }
         
-        /* Calendly inline widget */
-        .calendly-inline-widget {
-            min-width: 320px;
-            height: 900px;
+        /* Page rendez-vous styles */
+        .rdv-hero {
+            background: var(--color-bg-alt);
+            padding: var(--spacing-xl) 0 var(--spacing-lg);
+            text-align: center;
         }
         
-        /* Wrapper pour arrondir */
-        .calendly-wrapper {
-            border-radius: 16px;
-            overflow: hidden;
+        .rdv-hero h1 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: var(--spacing-sm);
+            color: #2D2D2D;
+        }
+        
+        .rdv-hero .subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--color-text-light);
+            max-width: 700px;
+            margin: 0 auto var(--spacing-lg);
+            line-height: 1.6;
+        }
+        
+        /* Calendly container */
+        .calendly-section {
+            padding: var(--spacing-lg) 0;
+            background: white;
+        }
+        
+        .calendly-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            min-height: 700px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: var(--spacing-md);
+        }
+        
+        /* Placeholder Calendly */
+        .calendly-placeholder {
+            text-align: center;
+            padding: var(--spacing-xl);
+        }
+        
+        .calendly-placeholder h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-md);
+            color: #2D2D2D;
+        }
+        
+        .calendly-placeholder p {
+            font-size: 1.1rem;
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .contact-details {
+            margin-top: var(--spacing-lg);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+            align-items: center;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            font-size: 1.1rem;
+        }
+        
+        .contact-item a {
+            color: var(--color-secondary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-item a:hover {
+            color: var(--color-accent);
         }
         
         @media (max-width: 768px) {
-            .page-title {
-                font-size: 1.8rem !important;
-            }
-            
-            /* Arrondir calendrier sur mobile */
-            .calendly-wrapper {
-                border-radius: 16px !important;
-                overflow: hidden !important;
-                -webkit-mask-image: -webkit-radial-gradient(white, black);
-            }
-            
-            .calendly-inline-widget {
-                height: 1100px !important;
-            }
+        .page-title {
+            font-size: 1.8rem !important;
         }
+        
+        .calendly-wrapper {
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            clip-path: inset(0 0 0 0 round 16px);
+            -webkit-clip-path: inset(0 0 0 0 round 16px);
+        }
+        
+        .calendly-inline-widget {
+            height: 1100px !important;
+        }
+}
     </style>
 </head>
 <body>
@@ -82,17 +150,16 @@
     </nav>
 
     <!-- CALENDLY SECTION -->
-    <section class="calendly-section" style="padding-bottom: 100px; background-color: #F8F7F4;">    
+<section class="calendly-section" style="padding-bottom: 100px; background-color: #F8F7F4;">    
         <div class="container">
-            <h1 class="page-title" style="text-align: center; margin-bottom: 20px;">Parlons de votre projet</h1>
-            <p class="subtitle" style="text-align: center; margin-bottom: 40px; color: #666; font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">Un échange gratuit de 30 minutes pour comprendre vos enjeux<br>et voir comment un assistant IA peut s'intégrer concrètement à votre activité.</p>
-            
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-wrapper">        
-                <div class="calendly-inline-widget" data-url="https://calendly.com/orai-agents/echange-decouverte"></div>        
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-            </div>
-            <!-- Calendly inline widget end -->            
+<h1 class="page-title" style="text-align: center; margin-bottom: 20px;">Parlons de votre projet</h1>
+        <p class="subtitle" style="text-align: center; margin-bottom: 40px; color: #666; font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">Un échange gratuit de 30 minutes pour comprendre vos enjeux<br>et voir comment un assistant IA peut s'intégrer concrètement à votre activité.</p>
+        
+        <!-- Calendly inline widget begin -->
+<div style="border-radius: 16px; overflow: hidden;">        
+<div class="calendly-inline-widget" data-url="https://calendly.com/orai-agents/echange-decouverte" style="min-width:320px;height:800px;"></div>        
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+        <!-- Calendly inline widget end -->            
         </div>
     </section>
 
