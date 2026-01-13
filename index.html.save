@@ -56,6 +56,11 @@
         .hero-title {
             font-size: clamp(1.75rem, 3.5vw, 2.8rem);
         }
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 1.rem !important;
+    }
+}
         
         /* Boutons élégants */
         .btn-primary {
@@ -305,7 +310,7 @@
             line-height: 1.7;
             color: var(--color-text-light);
             margin-bottom: var(--spacing-sm);
-            text-align: center;
+            text-align: left;
         }
         
         /* Footer élégant - Logo gauche + rubriques droite */
@@ -396,6 +401,67 @@
                 justify-content: center;
             }
         }
+
+/* Section CTA - texte blanc + padding réduit */
+        .section-cta {
+            padding: var(--spacing-md) 0 !important;
+        }
+        
+        .section-cta h2,
+        .section-cta p {
+            color: white !important;
+        }
+
+/* Mobile - réduire texte transition */
+        @media (max-width: 768px) {
+            .transition-cta p {
+                font-size: 1rem !important;
+            }
+        }
+/* Mobile - augmenter police sous-titres */
+            .hero-title-desktop {
+@media (max-width: 768px) {
+            .hero-subtitle {
+  text-align: center;
+                font-size: 1rem !important;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem !important;
+            }
+        }
+        }
+
+/* Mobile - réduire titres sur-mesure */
+        @media (max-width: 768px) {
+            #sur-mesure h3 {
+                font-size: 1.2rem !important;
+            }
+        }
+
+@media (max-width: 768px) {
+    .disclaimer-part2 {
+        display: block;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Afficher/masquer selon device */
+        .hero-title-mobile {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title-desktop {
+                display: none;
+            }
+            
+            .hero-title-mobile {
+                display: block;
+                font-size: 1.7rem !important;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -415,8 +481,8 @@
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="#agents">Nos Agents</a></li>
                 <li><a href="#sur-mesure">Solution personnalisée</a></li>
-                <li><a href="tarifs.html">Nos offres</a></li>
-                <li><a href="#contact" class="nav-cta">Planifier un échange</a></li>
+                <li><a href="tarifs.html">Offres</a></li>
+                <li><a href="rendez-vous.html" class="nav-cta">Planifier un échange</a></li>
             </ul>
         </div>
     </nav>
@@ -424,8 +490,9 @@
     <!-- HERO -->
     <section class="hero">
         <div class="container hero-content">
-            <h1 class="hero-title">Des Agents IA qui travaillent 24/7<br>pour votre entreprise.</h1>
-            <p class="hero-subtitle">Répondre aux appels, qualifier vos prospects, gérer vos demandes clients — et bien plus encore.<br>
+<h1 class="hero-title hero-title-desktop">Des Agents IA qui travaillent 24/7<br>pour votre entreprise.</h1>
+<h1 class="hero-title hero-title-mobile">Des Agents IA<br>qui travaillent 24/7<br>pour votre entreprise.</h1>
+            <p class="hero-subtitle">Répondre aux appels, qualifier vos prospects, gérer vos demandes clients  — et bien plus encore.<br>
             Votre premier collaborateur IA, adapté à votre métier.</p>
             <div class="hero-cta">
                 <a href="#agents" class="btn btn-primary">Découvrir nos agents</a>
@@ -701,7 +768,7 @@
         <div class="container">
             <div class="custom-intro">
                 <h2>Des Agents sur-mesure,<br>adaptés à votre fonctionnement</h2>
-                <p class="custom-intro-text">Les agents existants ne correspondent pas exactement à vos besoins ? Nous concevons également des solutions sur-mesure, adaptées à votre contexte et vos processus spécifiques.<br></p>
+                <p class="custom-intro-text">Les agents existants ne correspondent pas exactement à vos besoins ?<br class="mobile-break"> Nous concevons également des solutions sur-mesure, adaptées à votre contexte et vos processus spécifiques.<br></p>
             </div>
 
             <h3 style="text-align: center; margin-top: 40px; margin-bottom: var(--spacing-md); font-size: 1.5rem;">Exemples d'adaptations réalisées</h3>
@@ -734,12 +801,14 @@
                 </div>
             </div>
 
-            <p class="section-disclaimer">Ces exemples illustrent notre approche. Votre besoin est différent ? Parlons-en.</p>
+            <p class="section-disclaimer" style="margin-top: 20px;">
+<span class="disclaimer-part1">Ces exemples illustrent notre approche.</span> <span class="disclaimer-part2">Votre besoin est différent ? Parlons-en.</span>
+</p>
 
             <!-- SECTION Comment se déroule un projet sur-mesure (placée ici et remontée) -->
             <div style="margin-top: 40px;">
                 <div class="section-header">
-                    <h2 class="section-title">Comment se déroule un projet sur-mesure</h2>
+                    <h3 style="font-size: 1.5rem; text-align: center;">Comment se déroule un projet sur-mesure</h3>
                 </div>
 
                 <div class="process-steps">
@@ -800,8 +869,6 @@
         </div>
     </section>
 
-    <!-- FOOTER - Logo gauche + Rubriques droite -->
-    <footer class="footer">
 <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
