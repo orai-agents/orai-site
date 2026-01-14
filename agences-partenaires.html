@@ -31,7 +31,7 @@
         /* Hero agences avec fond beige */
         .hero-agences {
             background: var(--color-bg-alt);
-            padding: var(--spacing-xl) 0 var(--spacing-lg);
+            padding: var(--spacing-lg) 0 var(--spacing-md);
             text-align: center;
             position: relative;
         }
@@ -70,10 +70,34 @@
         }
         
         .hero-agences .tagline {
-            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+            font-size: clamp(1rem, 2vw, 1.2rem);
             font-weight: 600;
             color: var(--color-secondary);
             margin-bottom: var(--spacing-md);
+        }
+        
+        /* Uniformiser espacements sections */
+        .section {
+            padding: var(--spacing-lg) 0;
+        }
+        
+        .section-alt {
+            background: var(--color-bg-alt);
+            position: relative;
+        }
+        
+        .section-alt::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(135deg, transparent 48%, rgba(212, 175, 55, 0.02) 49%, rgba(212, 175, 55, 0.02) 51%, transparent 52%);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
         }
         
         /* Sections avec icônes */
@@ -81,7 +105,7 @@
             display: flex;
             align-items: flex-start;
             gap: var(--spacing-md);
-            margin-bottom: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
         }
         
         .icon-section-icon {
@@ -229,13 +253,13 @@
         }
         
         .section-cta-final h2 {
-            color: white;
+            color: white !important;
             margin-bottom: var(--spacing-sm);
         }
         
         .section-cta-final p {
             color: rgba(255, 255, 255, 0.8);
-            font-size: 1.2rem;
+            font-size: 1rem;
             margin-bottom: var(--spacing-md);
         }
         
