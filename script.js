@@ -8,12 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     
-    if (navToggle) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
-    }
+    if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+        console.log('Menu toggled!'); // Pour debug
+    });
+} else {
+    console.error('Nav elements not found:', { navToggle, navMenu });
+}
     
     // Fermer le menu mobile au clic sur un lien
     const navLinks = document.querySelectorAll('.nav-menu a');
