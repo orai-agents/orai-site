@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (target) {
                 e.preventDefault();
                 const navHeight = document.querySelector('.nav').offsetHeight;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight + 25;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight + 30;
                 
                 window.scrollTo({
                     top: targetPosition,
