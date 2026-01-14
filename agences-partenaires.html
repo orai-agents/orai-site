@@ -61,13 +61,14 @@
             color: #2D2D2D;
         }
         
-        .hero-agences .subtitle {
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            color: var(--color-text-light);
-            max-width: 800px;
-            margin: 0 auto var(--spacing-lg);
-            line-height: 1.6;
-        }
+       .hero-agences .subtitle {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+    line-height: 1.6;
+    text-align: left;
+}
         
         .hero-agences .tagline {
             font-size: clamp(1rem, 2vw, 1.2rem);
@@ -76,6 +77,11 @@
             margin-bottom: var(--spacing-md);
         }
         
+        /* Forcer taille titres sections */
+.section h2 {
+    font-size: clamp(1.4rem, 2.8vw, 2rem) !important;
+}
+
         /* Uniformiser espacements sections */
         .section {
             padding: var(--spacing-lg) 0;
@@ -264,16 +270,17 @@
         }
         
         /* Responsive */
-        @media (max-width: 1024px) {
-            .solutions-grid,
-            .avantages-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .icon-section {
-                flex-direction: column;
-            }
-        }
+       @media (max-width: 1024px) {
+    .solutions-grid,
+    .avantages-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* ENLEVER cette ligne pour garder les numéros à côté */
+    /* .icon-section {
+        flex-direction: column;
+    } */
+}
         
         @media (max-width: 768px) {
             .hero-agences h1 {
@@ -285,6 +292,15 @@
                 height: 50px;
                 font-size: 1.2rem;
             }
+
+            /* Réduire taille titres et textes */
+    .icon-section-content h3 {
+        font-size: 1rem;
+    }
+    
+    .icon-section-content p {
+        font-size: 0.9rem;
+    }
         }
     </style>
 </head>
