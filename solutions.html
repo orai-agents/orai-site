@@ -101,7 +101,7 @@
         }
         
         .sector-header h2 {
-            font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+            font-size: clamp(1.2rem, 2.2vw, 1.7rem);
             margin-bottom: var(--spacing-xs);
         }
         
@@ -222,14 +222,18 @@
             margin-top: var(--spacing-lg);
         }
         
-        .process-step {
+       .process-step {
     background: white;
     padding: var(--spacing-md);
     border-radius: var(--border-radius);
     border: 1px solid var(--color-border);
+}
+
+.process-step-header {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
 }
 
 .process-number {
@@ -248,8 +252,7 @@
 
 .process-step h3 {
     font-size: 1.2rem;
-    margin-top: 0;
-    margin-bottom: var(--spacing-xs);
+    margin: 0;
 }
         
         .process-step p {
@@ -555,21 +558,27 @@
             
             <div class="process-steps">
                 <div class="process-step">
+                    <div class="process-step-header">
                     <div class="process-number">1</div>
                     <h3>Rendez-vous découverte</h3>
+                    </div>
                     <p>Un échange gratuit de 30 minutes pour comprendre votre activité, vos enjeux et évaluer la pertinence de l'IA dans votre contexte.</p>
                 </div>
                 
                 <div class="process-step">
+                    <div class="process-step-header">
                     <div class="process-number">2</div>
                     <h3>Audit approfondi</h3>
+                    </div>
                     <p>Analyse détaillée de vos processus, proposition d'une solution adaptée et chiffrage précis.</p>
                     <p class="process-note">L'investissement de l'audit est déduit intégralement si le projet est lancé</p>
                 </div>
                 
                 <div class="process-step">
+                    <div class="process-step-header">
                     <div class="process-number">3</div>
                     <h3>Développement & déploiement</h3>
+                    </div>
                     <p>Conception de votre agent IA sur-mesure, tests réguliers, déploiement sur vos outils et accompagnement à la prise en main.</p>
                 </div>
             </div>
