@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Effet de grille subtile en arrière-plan */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        
+        .container {
+            text-align: center;
+            z-index: 1;
+            padding: 80px;
+        }
+        
+        .logo {
+            color: #D4AF37;
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+        }
+        
+        h1 {
+            color: #FFFFFF;
+            font-size: 72px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+        
+        .highlight {
+            color: #D4AF37;
+        }
+        
+        .subtitle {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 36px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+        
+        .baseline {
+            color: rgba(212, 175, 55, 0.8);
+            font-size: 24px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        /* Accent doré en haut à gauche */
+        .accent-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.15), transparent 70%);
+        }
+        
+        /* Accent doré en bas à droite */
+        .accent-bottom {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle at bottom right, rgba(212, 175, 55, 0.15), transparent 70%);
+        }
+    </style>
+</head>
+<body>
+    <div class="accent-top"></div>
+    <div class="accent-bottom"></div>
+    
+    <div class="container">
+        <div class="logo">OR AI AGENTS</div>
+        
+        <h1>
+            Agents IA qui travaillent <span class="highlight">24/7</span>
+        </h1>
+        
+        <div class="subtitle">
+            Automatisez acquisition, conversion et fidélisation
+        </div>
+        
+        <div class="baseline">
+            Catalogue ou sur-mesure
+        </div>
+    </div>
+</body>
+</html>
