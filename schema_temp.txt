@@ -7,7 +7,7 @@
       "url": "https://orai-agents.com",
       "logo": "https://orai-agents.com/OR-AI-LOGO-HEADER.svg",
       "telephone": "+33661267519",
-      "email": "oraiagents@gmail.com",
+      "email": "contact@orai-agents.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Cannes",
@@ -19,7 +19,7 @@
         "@type": "ContactPoint",
         "telephone": "+33661267519",
         "contactType": "Service client",
-        "email": "oraiagents@gmail.com",
+        "email": "contact@orai-agents.com",
         "areaServed": "FR",
         "availableLanguage": "French"
       }
