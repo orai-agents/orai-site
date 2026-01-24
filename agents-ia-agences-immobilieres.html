@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" sizes="48x48" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" href="/favicon.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agents IA pour agences immobilières | OR AI Agents</title>
+    <meta name="description" content="Des agents IA spécialisés pour l'immobilier : qualification automatique des prospects, prise de rendez-vous pour les visites, réponses aux questions récurrentes. Augmentez vos conversions.">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h1, h2, h3, h4, h5, h6 {
+            color: #2D2D2D;
+        }
+        .logo {
+            cursor: pointer;
+        }
+        .nav-cta {
+            color: var(--color-secondary) !important;
+            border-color: var(--color-secondary) !important;
+        }
+        .nav-cta:hover {
+            background: var(--color-secondary) !important;
+            color: var(--color-primary) !important;
+        }
+        .hero-simple {
+            background: var(--color-bg-alt);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+            position: relative;
+        }
+        .hero-simple::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(135deg, transparent 48%, rgba(212, 175, 55, 0.02) 49%, rgba(212, 175, 55, 0.02) 51%, transparent 52%);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero-simple-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-simple h1 {
+            font-size: clamp(1.65rem, 3.2vw, 2.8rem);
+            margin-bottom: var(--spacing-sm);
+        }
+        .hero-simple p {
+            font-size: 1.05rem;
+            color: var(--color-text-light);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-md);
+        }
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-md) 0;
+        }
+        .content-section h2 {
+            font-size: clamp(1.4rem, 2.8vw, 2rem);
+            margin-bottom: var(--spacing-sm);
+        }
+        .content-section p,
+        .content-section li {
+            color: var(--color-text-light);
+            line-height: 1.7;
+            margin-bottom: var(--spacing-sm);
+        }
+        .content-section ul {
+            margin: var(--spacing-sm) 0;
+            padding-left: 1.5rem;
+        }
+        .content-section li {
+            margin-bottom: 0.75rem;
+        }
+        .cta-section {
+            text-align: center;
+            padding: var(--spacing-lg) 0;
+        }
+        .cta-section .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            margin: 0 var(--spacing-xs);
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .btn-primary {
+            background: var(--color-secondary);
+            color: white;
+            border: 2px solid var(--color-secondary);
+        }
+        .btn-primary:hover {
+            background: var(--color-accent);
+            border-color: var(--color-accent);
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-secondary);
+            border: 2px solid var(--color-secondary);
+        }
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--color-accent);
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="index.html">
+                <img src="OR-AI-LOGO-HEADER.svg" alt="OR AI Agents - Assistants IA sur-mesure" class="logo">
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#agents">Nos agents IA</a></li>
+                <li><a href="agents-ia-sur-mesure.html">Approche sur-mesure</a></li>
+                <li><a href="tarifs-agents-ia.html">Tarifs</a></li>
+                <li><a href="contact.html" class="nav-cta">Planifier un échange</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero-simple">
+        <div class="container hero-simple-content">
+            <h1>Agents IA pour agences immobilières</h1>
+            <p>Des agents IA spécialisés pour l'immobilier : qualification automatique des prospects, prise de rendez-vous pour les visites, réponses aux questions récurrentes. Augmentez vos conversions.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="content-section">
+<h2>À quoi servent les agents IA dans l'immobilier ?</h2>
+<p>Un agent IA pour agence immobilière prend en charge le premier contact avec vos prospects entrants. Il pose automatiquement les bonnes questions pour qualifier le besoin, répond instantanément aux questions fréquentes, et propose des créneaux de visite.</p>
+
+<h2>Usages fréquents en immobilier</h2>
+<ul>
+<li><strong>Qualification des prospects</strong> : budget, localisation, type de bien, timing</li>
+<li><strong>Réponses instantanées</strong> : disponibilité des biens, prix, caractéristiques</li>
+<li><strong>Prise de rendez-vous visites</strong> : proposition de créneaux, confirmation automatique</li>
+<li><strong>Relances automatiques</strong> : suivi des prospects intéressés</li>
+</ul>
+
+<h2>Pourquoi OR AI Agents</h2>
+<p>OR AI Agents développe des agents IA spécialisés pour l'immobilier, formés sur votre portefeuille de biens et votre zone d'intervention.</p>
+            </div>
+
+            <div class="cta-section">
+                <a href="index.html#agents" class="btn btn-primary">Découvrir nos agents</a>
+                <a href="contact.html" class="btn btn-secondary">Prendre rendez-vous</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content-new">
+                <div class="footer-col footer-logo-col">
+                    <img src="OR-AI-LOGO-HEADER.svg" alt="OR AI Agents - Assistants IA sur-mesure" class="footer-logo">
+                    <p class="footer-tagline">Assistants IA sur-mesure</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:contact@orai-agents.com">contact@orai-agents.com</a></p>
+                    <p>06 61 26 75 19</p>
+                    <p>Cannes, Côte d'Azur</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens</h4>
+                    <p><a href="mentions-legales.html">Mentions légales</a></p>
+                    <p><a href="politique-confidentialite.html">Politique de confidentialité</a></p>
+                    <p><a href="agences-partenaires.html">Agences partenaires</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom-new">
+                <p>© 2026 OR AI Agents - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.nav-toggle').click(function() {
+                $('.nav-menu').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
