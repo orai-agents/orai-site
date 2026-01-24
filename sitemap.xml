@@ -1,28 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://orai-agents.com/</loc>
-    <lastmod>2026-01-14</lastmod>
+    <loc>https://www.orai-agents.com/</loc>
     <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://orai-agents.com/agents-ia-sur-mesure.html</loc>
-    <lastmod>2026-01-14</lastmod>
+    <loc>https://www.orai-agents.com/agents-ia-sur-mesure.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/agences-partenaires.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/contact.html</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://orai-agents.com/tarifs-agents-ia.html</loc>
-    <lastmod>2026-01-14</lastmod>
+    <loc>https://www.orai-agents.com/tarifs-agents-ia.html</loc>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://orai-agents.com/agences-partenaires.html</loc>
-    <lastmod>2026-01-14</lastmod>
+    <loc>https://www.orai-agents.com/implantations-usages.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/agents-ia-cannes.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/agents-ia-nice.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/agents-ia-antibes.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/agents-ia-sophia-antipolis.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/agents-ia-cote-d-azur.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/assistant-vocal-ia.html</loc>
     <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://orai-agents.com/contact.html</loc>
-    <lastmod>2026-01-14</lastmod>
-    <priority>0.6</priority>
+    <loc>https://www.orai-agents.com/automatisation-echanges-clients.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/qualification-leads-ia.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/support-client-ia-247.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/agent-ia-gestion-emails.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/prise-rendez-vous-automatique-ia.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/assistant-commercial-ia.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/agent-conversationnel-sur-mesure.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/agents-ia-hotellerie.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/agents-ia-conciergerie.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/agents-ia-agences-immobilieres.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/agents-ia-centres-formation.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/agents-ia-services-b2b.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/mentions-legales.html</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.orai-agents.com/politique-confidentialite.html</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
   </url>
 </urlset>
