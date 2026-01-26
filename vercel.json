@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "orai-agents.com"
+        }
+      ],
+      "destination": "https://www.orai-agents.com/:path*",
+      "permanent": true
+    }
+  ]
+}
